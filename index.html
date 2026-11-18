@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>Bank Soal Matematika Kelas 7 — Bab 1–3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,700;9..144,800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f2f6ff;
+    --bg-2:#e8efff;
+    --card:#ffffff;
+    --card-border:#d7e1f5;
+    --ink:#0f1f3d;
+    --ink-2:#33456b;
+    --muted:#5b6b8c;
+    --blue:#1457d9;
+    --blue-dark:#0d3fa3;
+    --blue-soft:#e3ecff;
+    --teal:#0a7a5c;
+    --teal-soft:#dcf5ec;
+    --amber:#b45309;
+    --amber-bg:#fef3c7;
+    --amber-border:#fcd34d;
+    --radius:20px;
+    --shadow:0 10px 30px rgba(15,45,110,.10), 0 2px 6px rgba(15,45,110,.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0b1526;
+      --bg-2:#0f1e38;
+      --card:#13233f;
+      --card-border:#263a5e;
+      --ink:#f2f6ff;
+      --ink-2:#c7d3ec;
+      --muted:#9fb0cf;
+      --blue:#5b8cff;
+      --blue-dark:#8db1ff;
+      --blue-soft:#1b3260;
+      --teal:#34d399;
+      --teal-soft:#12382f;
+      --amber:#fbbf24;
+      --amber-bg:#3a2d0a;
+      --amber-border:#7a5a12;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:"Plus Jakarta Sans", system-ui, -apple-system, Segoe UI, sans-serif;
+    background:
+      radial-gradient(900px 420px at 15% -60px, var(--bg-2), transparent 65%),
+      var(--bg);
+    color:var(--ink);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  .wrap{max-width:1020px;margin:0 auto;padding:28px 18px 56px}
+
+  /* Header */
+  .top-label{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--ink);color:#fff;
+    font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    padding:7px 12px;border-radius:999px;
+  }
+  @media (prefers-color-scheme: dark){ .top-label{background:#f2f6ff;color:#0b1526} }
+  .top-label i{width:7px;height:7px;border-radius:50%;background:#fbbf24;display:block}
+  h1{
+    font-family:"Fraunces", Georgia, serif;
+    font-size:clamp(2.1rem, 5.2vw, 3.4rem);
+    line-height:1.02;letter-spacing:-.02em;
+    margin:18px 0 12px;font-weight:800;max-width:18ch;
+  }
+  h1 span{color:var(--blue)}
+  .lead{font-size:clamp(1rem,2vw,1.13rem);color:var(--ink-2);max-width:62ch;margin:0}
+  .lead strong{color:var(--ink)}
+
+  .meta-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .meta{
+    background:var(--card);border:1.5px solid var(--card-border);
+    border-radius:999px;padding:8px 13px;
+    font-size:.88rem;font-weight:600;color:var(--ink-2);
+    display:inline-flex;gap:7px;align-items:center;
+  }
+  .meta b{color:var(--ink)}
+  .meta .dot{width:8px;height:8px;border-radius:50%;flex:none}
+  .dot-blue{background:var(--blue)} .dot-teal{background:#0ea371} .dot-amber{background:#f59e0b}
+
+  /* File cards */
+  .section-title{font-size:1.05rem;font-weight:800;margin:36px 0 6px;letter-spacing:-.01em}
+  .section-sub{color:var(--muted);font-size:.95rem;margin:0 0 16px}
+  .files{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media (max-width:720px){ .files{grid-template-columns:1fr} }
+
+  .file-card{
+    background:var(--card);border:1.5px solid var(--card-border);
+    border-radius:var(--radius);padding:22px 22px 20px;
+    box-shadow:var(--shadow);display:flex;flex-direction:column;
+  }
+  .file-card.featured{border-color:var(--blue);border-width:2px}
+  .file-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+  .file-kicker{font-size:.78rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--blue)}
+  .file-card.teal .file-kicker{color:var(--teal)}
+  .range{
+    font-family:"Fraunces", Georgia, serif;font-weight:800;
+    font-size:2rem;line-height:1;white-space:nowrap;
+  }
+  .range small{display:block;font-family:"Plus Jakarta Sans",sans-serif;font-size:.78rem;font-weight:700;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;margin-top:5px;text-align:right}
+  .file-card h2{font-size:1.28rem;line-height:1.25;margin:10px 0 8px;letter-spacing:-.01em}
+  .file-card p{margin:0;color:var(--ink-2);font-size:.96rem}
+  .covers{list-style:none;margin:16px 0 0;padding:14px 0 0;border-top:1.5px dashed var(--card-border);display:grid;gap:9px}
+  .covers li{display:flex;gap:10px;align-items:flex-start;font-size:.93rem;color:var(--ink-2)}
+  .covers li b{color:var(--ink)}
+  .badge{
+    flex:none;font-size:.72rem;font-weight:800;letter-spacing:.03em;
+    padding:3px 8px;border-radius:999px;margin-top:1px;white-space:nowrap;
+  }
+  .badge-blue{background:var(--blue-soft);color:var(--blue-dark)}
+  @media (prefers-color-scheme: dark){ .badge-blue{color:#c7dbff} }
+  .badge-teal{background:var(--teal-soft);color:var(--teal)}
+  .free-note{
+    margin-top:14px;background:var(--amber-bg);border:1.5px solid var(--amber-border);
+    color:var(--amber);border-radius:12px;padding:10px 12px;font-size:.88rem;font-weight:600;line-height:1.45;
+  }
+  @media (prefers-color-scheme: dark){ .free-note{color:#fde68a} }
+
+  .cta{
+    margin-top:auto;padding-top:20px;
+  }
+  .btn{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    width:100%;min-height:56px;padding:14px 18px;border-radius:14px;
+    background:var(--blue);color:#fff;text-decoration:none;
+    font-weight:800;font-size:1rem;letter-spacing:-.01em;
+    box-shadow:0 8px 18px rgba(20,87,217,.28);
+    transition:transform .15s ease, background .15s ease;
+  }
+  .btn:hover{background:var(--blue-dark)}
+  .btn:active{transform:scale(.985)}
+  .btn:focus-visible{outline:3px solid var(--amber-border);outline-offset:3px}
+  .btn-teal{background:#0a7a5c;box-shadow:0 8px 18px rgba(10,122,92,.25)}
+  .btn-teal:hover{background:#065f46}
+  .btn .arrow{font-size:1.3rem;line-height:1;flex:none}
+  .file-name{margin-top:9px;font-size:.78rem;color:var(--muted);word-break:break-all;text-align:center}
+  .file-name code{font-family:ui-monospace, SFMono-Regular, Menlo, monospace;font-size:.76rem}
+
+  /* Bab breakdown */
+  .babs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media (max-width:820px){ .babs{grid-template-columns:1fr} }
+  .bab{
+    background:var(--card);border:1.5px solid var(--card-border);border-radius:16px;padding:18px;
+  }
+  .bab-num{font-size:.76rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+  .bab h3{margin:6px 0 4px;font-size:1.02rem;line-height:1.3}
+  .bab .no{font-size:.86rem;font-weight:700;color:var(--blue);margin:0 0 10px}
+  .bab.teal .no{color:var(--teal)}
+  .bab ul{margin:0;padding-left:18px;color:var(--ink-2);font-size:.9rem;display:grid;gap:4px}
+
+  /* Steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media (max-width:820px){ .steps{grid-template-columns:1fr} }
+  .step{display:flex;gap:14px;background:var(--card);border:1.5px solid var(--card-border);border-radius:16px;padding:16px 18px}
+  .step-n{
+    flex:none;width:36px;height:36px;border-radius:50%;
+    background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:800;font-size:1rem;
+  }
+  @media (prefers-color-scheme: dark){ .step-n{background:#f2f6ff;color:#0b1526} }
+  .step h3{margin:2px 0 4px;font-size:.98rem}
+  .step p{margin:0;font-size:.9rem;color:var(--ink-2)}
+
+  footer{
+    margin-top:36px;padding-top:18px;border-top:1.5px solid var(--card-border);
+    color:var(--muted);font-size:.88rem;display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between;
+  }
+  footer strong{color:var(--ink-2)}
+  @media (prefers-reduced-motion: reduce){ *{transition:none !important; scroll-behavior:auto !important} }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <span class="top-label"><i></i> SMP &bull; Matematika &bull; Kelas 7</span>
+  <h1>Bank Soal Matematika <span>Kelas 7</span></h1>
+  <p class="lead">Latihan <strong>30 soal Bab 1–3</strong> yang dibagi menjadi dua file. Pilih file di bawah ini, isi nama dan kelas, lalu jawab langsung dengan klik — seperti kuis biasa.</p>
+
+  <div class="meta-row" aria-label="Ringkasan soal">
+    <span class="meta"><span class="dot dot-blue"></span> Total <b>30 soal</b></span>
+    <span class="meta"><span class="dot dot-teal"></span> <b>3 bab</b> materi</span>
+    <span class="meta"><span class="dot dot-amber"></span> PG &bull; MCMA &bull; Benar–Salah</span>
+    <span class="meta">Termasuk numerasi &amp; soal cerita</span>
+  </div>
+
+  <h2 class="section-title">Pilih file soal</h2>
+  <p class="section-sub">Kedua file bisa dibuka langsung. File 2 tidak terkunci — tidak harus menyelesaikan File 1 dulu.</p>
+
+  <div class="files">
+    <!-- FILE 1 -->
+    <article class="file-card featured">
+      <div class="file-head">
+        <div>
+          <div class="file-kicker">File 1 &bull; Siswa</div>
+          <h2>Soal Nomor 1–15</h2>
+        </div>
+        <div class="range">1–15<small>15 soal</small></div>
+      </div>
+      <p>Awal latihan: seluruh Bab 1 dan awal Bab 2.</p>
+      <ul class="covers">
+        <li><span class="badge badge-blue">Bab 1</span><span><b>No. 1–12</b> — Bilangan Bulat dan Pecahan</span></li>
+        <li><span class="badge badge-blue">Bab 2</span><span><b>No. 13–15</b> — Bentuk Aljabar (bagian awal)</span></li>
+      </ul>
+      <div class="cta">
+        <a class="btn" href="bank-soal-siswa-1-nomor-1-15.html">Buka File 1 — No. 1–15 <span class="arrow" aria-hidden="true">→</span></a>
+        <div class="file-name"><code>bank-soal-siswa-1-nomor-1-15.html</code></div>
+      </div>
+    </article>
+
+    <!-- FILE 2 -->
+    <article class="file-card teal">
+      <div class="file-head">
+        <div>
+          <div class="file-kicker">File 2 &bull; Siswa</div>
+          <h2>Soal Nomor 16–30</h2>
+        </div>
+        <div class="range">16–30<small>15 soal</small></div>
+      </div>
+      <p>Lanjutan latihan: sisa Bab 2 dan seluruh Bab 3, dengan skor di akhir.</p>
+      <ul class="covers">
+        <li><span class="badge badge-teal">Bab 2</span><span><b>No. 16–21</b> — Bentuk Aljabar (lanjutan)</span></li>
+        <li><span class="badge badge-teal">Bab 3</span><span><b>No. 22–30</b> — Persamaan &amp; Pertidaksamaan Linear Satu Variabel</span></li>
+      </ul>
+      <div class="free-note">✓ Bebas dibuka langsung, tanpa harus menyelesaikan File 1 terlebih dahulu.</div>
+      <div class="cta">
+        <a class="btn btn-teal" href="bank-soal-siswa-2-nomor-16-30.html">Buka File 2 — No. 16–30 <span class="arrow" aria-hidden="true">→</span></a>
+        <div class="file-name"><code>bank-soal-siswa-2-nomor-16-30.html</code></div>
+      </div>
+    </article>
+  </div>
+
+  <h2 class="section-title">Isi per bab</h2>
+  <p class="section-sub">Materi yang diujikan pada 30 soal ini.</p>
+  <div class="babs">
+    <section class="bab">
+      <div class="bab-num">Bab 1</div>
+      <h3>Bilangan Bulat dan Bilangan Pecahan</h3>
+      <p class="no">Nomor 1–12</p>
+      <ul>
+        <li>Membandingkan Bilangan Bulat</li>
+        <li>Operasi Aritmetika Bilangan Bulat</li>
+        <li>Faktorisasi Prima, FPB &amp; KPK</li>
+        <li>Membandingkan Bilangan Pecahan</li>
+        <li>Operasi Aritmetika Bilangan Pecahan</li>
+      </ul>
+    </section>
+    <section class="bab">
+      <div class="bab-num">Bab 2</div>
+      <h3>Bentuk Aljabar</h3>
+      <p class="no">Nomor 13–21</p>
+      <ul>
+        <li>Mengenal Bentuk Aljabar</li>
+        <li>Variabel, koefisien, konstanta &amp; suku sejenis</li>
+        <li>Operasi Hitung Bentuk Aljabar</li>
+      </ul>
+    </section>
+    <section class="bab teal">
+      <div class="bab-num">Bab 3</div>
+      <h3>Persamaan dan Pertidaksamaan Linear Satu Variabel</h3>
+      <p class="no">Nomor 22–30</p>
+      <ul>
+        <li>Persamaan &amp; Pertidaksamaan Linear Satu Variabel</li>
+        <li>Menyelesaikan Masalah (soal cerita)</li>
+      </ul>
+    </section>
+  </div>
+
+  <h2 class="section-title">Cara mengerjakan</h2>
+  <p class="section-sub">Tidak perlu mencetak — semua dijawab di halaman soal.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-n">1</div>
+      <div><h3>Buka salah satu file</h3><p>Klik tombol File 1 atau File 2 di atas sesuai nomor soal yang ditugaskan.</p></div>
+    </div>
+    <div class="step">
+      <div class="step-n">2</div>
+      <div><h3>Isi identitas &amp; jawab dengan klik</h3><p>Tulis nama, kelas, dan tanggal. Klik jawaban untuk PG, MCMA, dan Benar–Salah per pernyataan.</p></div>
+    </div>
+    <div class="step">
+      <div class="step-n">3</div>
+      <div><h3>Tekan Selesai</h3><p>Periksa nomor yang belum terjawab. Di File 2, skor 0–100 akan muncul setelah selesai.</p></div>
+    </div>
+  </div>
+
+  <footer>
+    <span><strong>Bank Soal Matematika Kelas 7</strong> — Bab 1–3</span>
+    <span>File 1: No. 1–15 &bull; File 2: No. 16–30</span>
+  </footer>
+
+</main>
+</body>
+</html>
