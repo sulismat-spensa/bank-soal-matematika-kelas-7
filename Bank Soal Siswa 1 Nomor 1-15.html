@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>Bank Soal Siswa 1 — Nomor 1–15 — Matematika Kelas 7</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f6f3;
+    --paper:#ffffff;
+    --ink:#101613;
+    --muted:#4b5a52;
+    --line:#d9e2db;
+    --line-strong:#b9c9be;
+    --accent:#0f766e;
+    --accent-ink:#ffffff;
+    --accent-soft:#e6f4f1;
+    --amber:#92400e;
+    --amber-soft:#fef3c7;
+    --blue:#1e40af;
+    --blue-soft:#dbeafe;
+    --rose:#9f1239;
+    --rose-soft:#ffe4e6;
+    --card-shadow:0 1px 2px rgba(16,22,19,.06), 0 8px 24px rgba(16,22,19,.06);
+    --radius:16px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0c1210;
+      --paper:#151d19;
+      --ink:#f2f5f3;
+      --muted:#a7b8ae;
+      --line:#2a3a32;
+      --line-strong:#3d5548;
+      --accent:#2dd4bf;
+      --accent-ink:#06201c;
+      --accent-soft:#12332e;
+      --amber:#fbbf24;
+      --amber-soft:#3a2e0a;
+      --blue:#93c5fd;
+      --blue-soft:#1e2f52;
+      --rose:#fda4af;
+      --rose-soft:#3f1622;
+      --card-shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Plus Jakarta Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.65;font-size:16px}
+  button,[role="button"],a.btn{min-height:44px}
+  a{color:var(--accent)}
+  .topbar{
+    position:sticky;top:0;z-index:20;
+    background:color-mix(in srgb, var(--paper) 92%, transparent);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar-inner{max-width:880px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .topbar strong{font-size:14px;letter-spacing:.01em}
+  .topbar .file-pill{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+  .pill{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:var(--paper);font-size:13px;font-weight:600;text-decoration:none;color:var(--ink)}
+  .pill.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 16px 56px}
+  /* Header */
+  .hero{background:var(--paper);border:1px solid var(--line);border-radius:20px;box-shadow:var(--card-shadow);padding:26px 22px 22px;overflow:hidden;position:relative}
+  .hero::before{content:"";position:absolute;inset:0 0 auto 0;height:6px;background:var(--accent)}
+  .eyebrow{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:4px 0 8px}
+  h1{font-family:"Fraunces",serif;font-size:clamp(28px,5vw,40px);line-height:1.08;margin:0 0 10px;font-weight:900;letter-spacing:-.01em}
+  .hero p.lead{margin:0;color:var(--muted);font-size:16px;max-width:62ch}
+  .meta-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .meta-chip{display:inline-flex;align-items:center;gap:7px;background:var(--accent-soft);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:13px;font-weight:700}
+  .meta-chip b{color:var(--accent)}
+  .identity{margin-top:18px;border:1.5px dashed var(--line-strong);border-radius:14px;padding:14px;display:grid;grid-template-columns:1fr 1fr;gap:12px 18px;background:color-mix(in srgb, var(--accent-soft) 45%, var(--paper))}
+  .identity label{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:4px}
+  .identity .line{border-bottom:2px solid var(--line-strong);min-height:28px}
+  @media (max-width:560px){.identity{grid-template-columns:1fr}}
+  /* Sections */
+  .panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:20px 22px;margin-top:16px}
+  .panel h2{font-size:18px;margin:0 0 10px;line-height:1.3}
+  .panel p{margin:0 0 8px}
+  .panel ul{margin:8px 0 0;padding-left:20px}
+  .panel li{margin:5px 0}
+  .note{font-size:14px;color:var(--muted)}
+  table.kisi{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:10px}
+  table.kisi th, table.kisi td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+  table.kisi th{background:var(--accent-soft);font-weight:800}
+  table.kisi td.num, table.kisi th.num{text-align:center;white-space:nowrap}
+  .jump{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .jump a{display:inline-flex;align-items:center;min-height:40px;padding:8px 14px;border-radius:999px;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:700;font-size:14px}
+  .jump a.secondary{background:var(--paper);color:var(--ink);border:1px solid var(--line-strong)}
+  /* Bab header */
+  .bab-head{margin:30px 0 6px;display:flex;gap:14px;align-items:flex-start}
+  .bab-num{flex:0 0 auto;width:52px;height:52px;border-radius:14px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-family:"Fraunces",serif;font-weight:900;font-size:22px}
+  .bab-head h2{margin:0;font-size:22px;line-height:1.25}
+  .bab-head p{margin:4px 0 0;color:var(--muted);font-size:14.5px}
+  /* Question card */
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:20px 22px;margin-top:14px}
+  .q-head{display:flex;align-items:flex-start;gap:12px;margin-bottom:10px}
+  .q-no{flex:0 0 auto;width:40px;height:40px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-weight:800;font-size:16px;margin-top:2px}
+  .q-badges{display:flex;flex-wrap:wrap;gap:6px}
+  .badge{font-size:11.5px;font-weight:800;letter-spacing:.04em;padding:4px 9px;border-radius:999px;border:1px solid var(--line)}
+  .badge.pg{background:var(--blue-soft);color:var(--blue);border-color:transparent}
+  .badge.mcma{background:var(--amber-soft);color:var(--amber);border-color:transparent}
+  .badge.bs{background:var(--rose-soft);color:var(--rose);border-color:transparent}
+  .badge.mat{background:var(--accent-soft);color:var(--ink)}
+  .q-stem{font-size:16.5px;line-height:1.7}
+  .q-stem p{margin:0}
+  .opts{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  @media (max-width:640px){.opts{grid-template-columns:1fr}}
+  .opts li{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:color-mix(in srgb, var(--paper) 96%, var(--bg))}
+  .opt-letter{flex:0 0 auto;width:28px;height:28px;border-radius:50%;border:2px solid var(--line-strong);display:grid;place-items:center;font-weight:800;font-size:13px;margin-top:1px;background:var(--paper)}
+  .opts li div{flex:1}
+  .stmts{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
+  .stmts li{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+  .stmt-no{flex:0 0 auto;font-weight:800;background:var(--amber-soft);color:var(--amber);border-radius:8px;padding:2px 9px;font-size:14px;margin-top:1px}
+  .hint{margin-top:12px;font-size:13.5px;color:var(--muted);font-style:italic}
+  table.bs{width:100%;border-collapse:collapse;margin-top:12px;font-size:15px}
+  table.bs th, table.bs td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+  table.bs th{background:var(--accent-soft);font-weight:800}
+  table.bs td.bs-col, table.bs th.bs-col{text-align:center;white-space:nowrap;width:110px}
+  .bs-choice{display:inline-flex;gap:14px;font-weight:800}
+  .bs-choice span{display:inline-flex;align-items:center;gap:6px}
+  .circle{width:18px;height:18px;border-radius:50%;border:2px solid var(--line-strong);display:inline-block;background:var(--paper)}
+  /* Answer sheet */
+  table.ans{width:100%;border-collapse:collapse;font-size:15px;margin-top:10px}
+  table.ans th, table.ans td{border:1px solid var(--line);padding:10px 12px}
+  table.ans th{background:var(--ink);color:var(--paper);text-align:left}
+  table.ans td.no{font-weight:800;width:52px;text-align:center}
+  table.ans td.cell{height:44px;min-width:110px}
+  .ans-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 22px}
+  @media (max-width:640px){.ans-grid{grid-template-columns:1fr}}
+  .next-box{margin-top:16px;background:var(--ink);color:var(--paper);border-radius:var(--radius);padding:20px 22px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+  .next-box h3{margin:0 0 4px;font-size:17px}
+  .next-box p{margin:0;opacity:.85;font-size:14.5px;max-width:52ch}
+  .next-box .tag{font-weight:800;background:var(--paper);color:var(--ink);padding:10px 14px;border-radius:999px;font-size:14px;white-space:nowrap}
+  footer{margin-top:22px;text-align:center;color:var(--muted);font-size:13.5px}
+  .frac{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;margin:0 .12em;line-height:1.05;text-align:center;font-size:.96em}
+  .frac .num{border-bottom:1.6px solid currentColor;padding:0 .38em .06em;font-size:.8em;font-weight:600}
+  .frac .den{padding:.06em .38em 0;font-size:.8em;font-weight:600}
+  .math{font-family:Georgia,'Times New Roman',serif;font-size:1.05em;white-space:nowrap}
+  .var{font-style:italic}
+  @media print{
+    .topbar,.jump,.next-box{display:none !important}
+    body{background:#fff}
+    .wrap{max-width:none;padding:0}
+    .q,.panel,.hero{box-shadow:none;break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <strong>Matematika Kelas 7 — Versi Siswa</strong>
+    <div class="file-pill">
+      <span class="pill active">File 1 • No. 1–15</span>
+      <span class="pill">File 2 • No. 16–30</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- HEADER -->
+  <header class="hero">
+    <p class="eyebrow">Bank Soal • Bab 1–3 • File 1 dari 2</p>
+    <h1>Soal Nomor 1–15</h1>
+    <p class="lead">Bilangan Bulat dan Pecahan (No. 1–12) dilanjutkan Bentuk Aljabar (No. 13–15). Kerjakan dengan teliti — soal ini tanpa kunci jawaban dan tanpa pembahasan.</p>
+    <div class="meta-row">
+      <span class="meta-chip">📄 <b>15</b> butir soal</span>
+      <span class="meta-chip">✦ PG • MCMA • Benar–Salah</span>
+      <span class="meta-chip">⏱ Waktu disarankan <b>45 menit</b></span>
+      <span class="meta-chip">Nilai maksimum bagian ini <b>50</b></span>
+    </div>
+    <div class="identity" aria-label="Identitas siswa">
+      <div><label>Nama Siswa</label><div class="line"></div></div>
+      <div><label>Kelas</label><div class="line"></div></div>
+      <div><label>Tanggal</label><div class="line"></div></div>
+      <div><label>Nilai</label><div class="line"></div></div>
+    </div>
+  </header>
+
+  <!-- PETUNJUK -->
+  <section class="panel" id="petunjuk">
+    <h2>Petunjuk Pengerjaan</h2>
+    <ul>
+      <li><strong>Pilihan Ganda (PG):</strong> pilih satu jawaban yang paling tepat (A, B, C, atau D).</li>
+      <li><strong>MCMA (Pilihan Ganda Kompleks):</strong> pilih <em>semua</em> pernyataan yang benar — jawaban benar dapat lebih dari satu. Tulis nomornya, misalnya (1), (2), dan (3).</li>
+      <li><strong>Benar–Salah:</strong> tentukan setiap pernyataan bernilai Benar (B) atau Salah (S).</li>
+      <li><strong>Soal numerasi &amp; cerita:</strong> tuliskan diketahui, ditanya, dan langkah perhitunganmu di kertas kerja.</li>
+      <li>Jawaban akhir tuliskan di <a href="#lembar-jawaban">Lembar Jawaban No. 1–15</a> di bagian bawah halaman ini.</li>
+    </ul>
+    <div class="jump">
+      <a href="#bab1">Mulai — Bab 1 (No. 1–12)</a>
+      <a href="#bab2" class="secondary">Bab 2 (No. 13–15)</a>
+      <a href="#lembar-jawaban" class="secondary">Lembar Jawaban</a>
+    </div>
+  </section>
+
+  <!-- KISI-KISI -->
+  <section class="panel">
+    <h2>Isi File Ini</h2>
+    <table class="kisi">
+      <thead><tr><th>Bab / Materi</th><th class="num">Nomor</th><th class="num">Jumlah</th><th>Tipe Soal</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Bab 1</strong> — Bilangan Bulat dan Bilangan Pecahan</td><td class="num">1–12</td><td class="num">12</td><td>PG, MCMA, Benar–Salah, numerasi, cerita</td></tr>
+        <tr><td><strong>Bab 2</strong> — Bentuk Aljabar <span class="note">(bagian awal, dilanjutkan di File 2)</span></td><td class="num">13–15</td><td class="num">3</td><td>PG, MCMA</td></tr>
+        <tr><td colspan="2"><strong>Total File 1</strong></td><td class="num"><strong>15</strong></td><td></td></tr>
+      </tbody>
+    </table>
+    <p class="note" style="margin-top:10px">Keterangan: PG = Pilihan Ganda &nbsp;•&nbsp; MCMA = pilihan ganda kompleks (jawaban lebih dari satu) &nbsp;•&nbsp; B–S = Benar–Salah. Nomor 16–30 ada di File 2.</p>
+  </section>
+
+  <!-- BAB 1 -->
+  <div class="bab-head" id="bab1">
+    <div class="bab-num">1</div>
+    <div>
+      <h2>Bab 1 — Bilangan Bulat dan Bilangan Pecahan</h2>
+      <p>Membandingkan bilangan bulat, operasi aritmetika bilangan bulat, faktorisasi prima, membandingkan &amp; operasi bilangan pecahan.</p>
+    </div>
+  </div>
+
+  <!-- 1 -->
+  <article class="q" id="soal-1">
+    <div class="q-head"><div class="q-no">1</div><div class="q-badges"><span class="badge pg">PG</span><span class="badge mat">Membandingkan Bilangan Bulat</span></div></div>
+    <div class="q-stem"><p>Urutan bilangan −8, 3, −2, 0, dan 5 dari yang terkecil ke yang terbesar adalah …</p></div>
+    <ul class="opts">
+      <li><span class="opt-letter">A</span><div>−8, 3, −2, 0, 5</div></li>
+      <li><span class="opt-letter">B</span><div>−8, −2, 0, 3, 5</div></li>
+      <li><span class="opt-letter">C</span><div>−2, −8, 0, 3, 5</div></li>
+      <li><span class="opt-letter">D</span><div>5, 3, 0, −2, −8</div></li>
+    </ul>
+  </article>
+
+  <!-- 2 -->
+  <article class="q" id="soal-2">
+    <div class="q-head"><div class="q-no">2</div><div class="q-badges"><span class="badge pg">PG • Numerasi</span><span class="badge mat">Operasi Bilangan Bulat</span></div></div>
+    <div class="q-stem"><p>Suhu di sebuah kota pada pagi hari adalah −5°C. Siang hari suhu naik 12°C, kemudian pada malam hari turun 3°C. Suhu pada malam hari adalah …</p></div>
+    <ul class="opts">
+      <li><span class="opt-letter">A</span><div>−20°C</div></li>
+      <li><span class="opt-letter">B</span><div>−4°C</div></li>
+      <li><span class="opt-letter">C</span><div>4°C</div></li>
+      <li><span class="opt-letter">D</span><div>10°C</div></li>
+    </ul>
+  </article>
+
+  <!-- 3 -->
+  <article class="q" id="soal-3">
+    <div class="q-head"><div class="q-no">3</div><div class="q-badges"><span class="badge pg">PG • Soal Cerita</span><span class="badge mat">Operasi Bilangan Bulat</span></div></div>
+    <div class="q-stem"><p>Seorang penyelam berada 12 meter di bawah permukaan laut. Ia naik 5 meter, kemudian turun lagi 2 meter. Posisi penyelam sekarang adalah …</p></div>
+    <ul class="opts">
+      <li><span class="opt-letter">A</span><div>19 meter di bawah permukaan laut</div></li>
+      <li><span class="opt-letter">B</span><div>9 meter di bawah permukaan laut</div></li>
+      <li><span class="opt-letter">C</span><div>5 meter di bawah permukaan laut</div></li>
+      <li><span class="opt-letter">D</span><div>15 meter di bawah permukaan laut</div></li>
+    </ul>
+  </article>
+
+  <!-- 4 -->
+  <article class="q" id="soal-4">
+    <div class="q-head"><div class="q-no">4</div><div class="q-badges"><span class="badge mcma">MCMA</span><span class="badge mat">Faktorisasi Prima</span></div></div>
+    <div class="q-stem"><p>Perhatikan pernyataan tentang bilangan 36 berikut. Pilih <strong>semua</strong> pernyataan yang benar.</p></div>
+    <ul class="stmts">
+      <li><span class="stmt-no">(1)</span><div>Faktorisasi prima dari 36 adalah 2<sup>2</sup> × 3<sup>2</sup>.</div></li>
+      <li><span class="stmt-no">(2)</span><div>Faktor prima dari 36 adalah 2 dan 3.</div></li>
+      <li><span class="stmt-no">(3)</span><div>FPB dari 36 dan 48 adalah 12.</div></li>
+      <li><span class="stmt-no">(4)</span><div>KPK dari 36 dan 48 adalah 72.</div></li>
+    </ul>
+    <p class="hint">Tuliskan nomor pernyataan yang benar, misalnya (1), (2), dan (3).</p>
+  </article>
+
+  <!-- 5 -->
+  <article class="q" id="soal-5">
+    <div class="q-head"><div class="q-no">5</div><div class="q-badges"><span class="badge bs">Benar–Salah</span><span class="badge mat">Faktorisasi Prima</span></div></div>
+    <div class="q-stem"><p>Tentukan Benar (B) atau Salah (S) untuk setiap pernyataan berikut.</p></div>
+    <table class="bs">
+      <thead><tr><th style="width:44px">No.</th><th>Pernyataan</th><th class="bs-col">Benar / Salah</th></tr></thead>
+      <tbody>
+        <tr><td><strong>a</strong></td><td>17 adalah bilangan prima.</td><td class="bs-col"><span class="bs-choice"><span><span class="circle"></span> B</span><span><span class="circle"></span> S</span></span></td></tr>
+        <tr><td><strong>b</strong></td><td>Faktorisasi prima dari 45 adalah 3 × 5.</td><td class="bs-col"><span class="bs-choice"><span><span class="circle"></span> B</span><span><span class="circle"></span> S</span></span></td></tr>
+        <tr><td><strong>c</strong></td><td>FPB dari 18 dan 24 adalah 6.</td><td class="bs-col"><span class="bs-choice"><span><span class="circle"></span> B</span><span><span class="circle"></span> S</span></span></td></tr>
+        <tr><td><strong>d</strong></td><td>KPK dari 6 dan 8 adalah 48.</td><td class="bs-col"><span class="bs-choice"><span><span class="circle"></span> B</span><span><span class="circle"></span> S</span></span></td></tr>
+      </tbody>
+    </table>
+  </article>
+
+  <!-- 6 -->
+  <article class="q" id="soal-6">
+    <div class="q-head"><div class="q-no">6</div><div class="q-badges"><span class="badge pg">PG</span><span class="badge mat">Membandingkan Bilangan Pecahan</span></div></div>
+    <div class="q-stem"><p>Pecahan yang paling besar di antara <span class="frac"><span class="num">3</span><span class="den">5</span></span>, <span class="frac"><span class="num">5</span><span class="den">8</span></span>, <span class="frac"><span class="num">2</span><span class="den">3</span></span>, dan <span class="frac"><span class="num">7</span><span class="den">12</span></span> adalah …</p></div>
+    <ul class="opts">
+      <li><span class="opt-letter">A</span><div><span class="frac"><span class="num">3</span><span class="den">5</span></span></div></li>
+      <li><span class="opt-letter">B</span><div><span class="frac"><span class="num">5</span><span class="den">8</span></span></div></li>
+      <li><span class="opt-letter">C</span><div><span class="frac"><span class="num">2</span><span class="den">3</span></span></div></li>
+      <li><span class="opt-letter">D</span><div><span class="frac"><span class="num">7</span><span class="den">12</span></span></div></li>
+    </ul>
+  </article>
+
+  <!-- 7 -->
+  <article class="q" id="soal-7">
+    <div class="q-head"><div class="q-no">7</div><div class="q-badges"><span class="badge pg">PG • Numerasi</span><span class="badge mat">Operasi Bilangan Pecahan</span></div></div>
+    <div class="q-stem"><p>Hasil dari <span class="frac"><span class="num">2</span><span class="den">3</span></span> + <span class="frac"><span class="num">1</span><span class="den">6</span></span> adalah …</p></div>
+    <ul class="opts">
+      <li><span class="opt-letter">A</span><div><span class="frac"><span class="num">3</span><span class="den">9</span></span></div></li>
+      <li><span class="opt-letter">B</span><div><span class="frac"><span class="num">1</span><span class="den">2</span></span></div></li>
+      <li><span class="opt-letter">C</span><div><span class="frac"><span class="num">5</span><span class="den">6</span></span></div></li>
+      <li><span class="opt-letter">D</span><div><span class="frac"><span class="num">7</span><span class="den">6</span></span></div></li>
+    </ul>
+  </article>
+
+  <!-- 8 -->
+  <article class="q" id="soal-8">
+    <div class="q-head"><div class="q-no">8</div><div class="q-badges"><span class="badge mcma">MCMA</span><span class="badge mat">Operasi Bilangan Pecahan</span></div></div>
+    <div class="q-stem"><p>Pilih <strong>semua</strong> hasil operasi pecahan yang benar.</p></div>
+    <ul class="stmts">
+      <li><span class="stmt-no">(1)</span><div><span class="frac"><span class="num">1</span><span class="den">2</span></span> + <span class="frac"><span class="num">1</span><span class="den">3</span></span> = <span class="frac"><span class="num">5</span><span class="den">6</span></span></div></li>
+      <li><span class="stmt-no">(2)</span><div><span class="frac"><span class="num">3</span><span class="den">4</span></span> − <span class="frac"><span class="num">1</span><span class="den">2</span></span> = <span class="frac"><span class="num">1</span><span class="den">4</span></span></div></li>
+      <li><span class="stmt-no">(3)</span><div><span class="frac"><span class="num">2</span><span class="den">3</span></span> × <span class="frac"><span class="num">3</span><span class="den">5</span></span> = <span class="frac"><span class="num">2</span><span class="den">5</span></span></div></li>
+      <li><span class="stmt-no">(4)</span><div><span class="frac"><span class="num">4</span><span class="den">5</span></span> ÷ <span class="frac"><span class="num">2</span><span class="den">3</span></span> = <span class="frac"><span class="num">8</span><span class="den">15</span></span></div></li>
+    </ul>
+  </article>
+
+  <!-- 9 -->
+  <article class="q" id="soal-9">
+    <div class="q-head"><div class="q-no">9</div><div class="q-badges"><span class="badge bs">Benar–Salah</span><span class="badge mat">Operasi Bilangan Pecahan</span></div></div>
+    <div class="q-stem"><p>Tentukan Benar (B) atau Salah (S) untuk setiap pernyataan berikut.</p></div>
+    <table class="bs">
+      <thead><tr><th style="width:44px">No.</th><th>Pernyataan</th><th class="bs-col">Benar / Salah</th></tr></thead>
+      <tbody>
+        <tr><td><strong>a</strong></td><td><span class="frac"><span class="num">5</span><span class="den">6</span></span> lebih besar dari <span class="frac"><span class="num">4</span><span class="den">5</span></span>.</td><td class="bs-col"><span class="bs-choice"><span><span class="circle"></span> B</span><span><span class="circle"></span> S</span></span></td></tr>
+        <tr><td><strong>b</strong></td><td>1,5 sama dengan <span class="frac"><span class="num">3</span><span class="den">2</span></span>.</td><td class="bs-col"><span class="bs-choice"><span><span class="circle"></span> B</span><span><span class="circle"></span> S</span></span></td></tr>
+        <tr><td><strong>c</strong></td><td><span class="frac"><span class="num">7</span><span class="den">8</span></span> − <span class="frac"><span class="num">3</span><span class="den">8</span></span> = <span class="frac"><span class="num">1</span><span class="den">2</span></span></td><td class="bs-col"><span class="bs-choice"><span><span class="circle"></span> B</span><span><span class="circle"></span> S</span></span></td></tr>
+        <tr><td><strong>d</strong></td><td><span class="frac"><span class="num">1</span><span class="den">2</span></span> × <span class="frac"><span class="num">1</span><span class="den">2</span></span> = 1</td><td class="bs-col"><span class="bs-choice"><span><span class="circle"></span> B</span><span><span class="circle"></span> S</span></span></td></tr>
+      </tbody>
+    </table>
+  </article>
+
+  <!-- 10 -->
+  <article class="q" id="soal-10">
+    <div class="q-head"><div class="q-no">10</div><div class="q-badges"><span class="badge pg">PG • Soal Cerita</span><span class="badge mat">Operasi Bilangan Pecahan</span></div></div>
+    <div class="q-stem"><p>Sinta mempunyai pita sepanjang 2<span class="frac"><span class="num">1</span><span class="den">2</span></span> meter. Pita itu dipotong <span class="frac"><span class="num">3</span><span class="den">4</span></span> meter untuk menghias kado. Sisa pita Sinta adalah …</p></div>
+    <ul class="opts">
+      <li><span class="opt-letter">A</span><div>1<span class="frac"><span class="num">1</span><span class="den">4</span></span> meter</div></li>
+      <li><span class="opt-letter">B</span><div>1<span class="frac"><span class="num">3</span><span class="den">4</span></span> meter</div></li>
+      <li><span class="opt-letter">C</span><div>2<span class="frac"><span class="num">1</span><span class="den">4</span></span> meter</div></li>
+      <li><span class="opt-letter">D</span><div>3<span class="frac"><span class="num">1</span><span class="den">4</span></span> meter</div></li>
+    </ul>
+  </article>
+
+  <!-- 11 -->
+  <article class="q" id="soal-11">
+    <div class="q-head"><div class="q-no">11</div><div class="q-badges"><span class="badge pg">PG • Soal Cerita • Numerasi</span><span class="badge mat">Operasi Bilangan Pecahan</span></div></div>
+    <div class="q-stem"><p>Budi mempunyai uang Rp60.000,00. Sebanyak <span class="frac"><span class="num">2</span><span class="den">5</span></span> bagian uang itu digunakan untuk membeli buku. Sisa uang Budi adalah …</p></div>
+    <ul class="opts">
+      <li><span class="opt-letter">A</span><div>Rp12.000,00</div></li>
+      <li><span class="opt-letter">B</span><div>Rp24.000,00</div></li>
+      <li><span class="opt-letter">C</span><div>Rp36.000,00</div></li>
+      <li><span class="opt-letter">D</span><div>Rp48.000,00</div></li>
+    </ul>
+  </article>
+
+  <!-- 12 -->
+  <article class="q" id="soal-12">
+    <div class="q-head"><div class="q-no">12</div><div class="q-badges"><span class="badge pg">PG • Numerasi</span><span class="badge mat">Operasi Bilangan Pecahan</span></div></div>
+    <div class="q-stem"><p>Hasil dari 1<span class="frac"><span class="num">1</span><span class="den">2</span></span> + <span class="frac"><span class="num">2</span><span class="den">3</span></span> × <span class="frac"><span class="num">3</span><span class="den">4</span></span> adalah …</p></div>
+    <ul class="opts">
+      <li><span class="opt-letter">A</span><div>1</div></li>
+      <li><span class="opt-letter">B</span><div>1<span class="frac"><span class="num">1</span><span class="den">2</span></span></div></li>
+      <li><span class="opt-letter">C</span><div>1<span class="frac"><span class="num">3</span><span class="den">4</span></span></div></li>
+      <li><span class="opt-letter">D</span><div>2</div></li>
+    </ul>
+  </article>
+
+  <!-- BAB 2 -->
+  <div class="bab-head" id="bab2">
+    <div class="bab-num">2</div>
+    <div>
+      <h2>Bab 2 — Bentuk Aljabar <span style="font-weight:600;color:var(--muted);font-size:16px">(bagian awal)</span></h2>
+      <p>Mengenal bentuk aljabar: variabel, koefisien, konstanta, dan suku sejenis. Nomor 16–21 ada di File 2.</p>
+    </div>
+  </div>
+
+  <!-- 13 -->
+  <article class="q" id="soal-13">
+    <div class="q-head"><div class="q-no">13</div><div class="q-badges"><span class="badge pg">PG</span><span class="badge mat">Mengenal Bentuk Aljabar</span></div></div>
+    <div class="q-stem"><p>Pada bentuk aljabar 5<em class="var">x</em><sup>2</sup> − 3<em class="var">x</em> + 7, koefisien dari <em class="var">x</em> dan konstantanya berturut-turut adalah …</p></div>
+    <ul class="opts">
+      <li><span class="opt-letter">A</span><div>5 dan 7</div></li>
+      <li><span class="opt-letter">B</span><div>−3 dan 7</div></li>
+      <li><span class="opt-letter">C</span><div>3 dan 7</div></li>
+      <li><span class="opt-letter">D</span><div>−3 dan −7</div></li>
+    </ul>
+  </article>
+
+  <!-- 14 -->
+  <article class="q" id="soal-14">
+    <div class="q-head"><div class="q-no">14</div><div class="q-badges"><span class="badge pg">PG</span><span class="badge mat">Mengenal Bentuk Aljabar</span></div></div>
+    <div class="q-stem"><p>Suku yang sejenis dengan 4<em class="var">ab</em> adalah …</p></div>
+    <ul class="opts">
+      <li><span class="opt-letter">A</span><div>4<em class="var">a</em></div></li>
+      <li><span class="opt-letter">B</span><div>4<em class="var">b</em></div></li>
+      <li><span class="opt-letter">C</span><div>−2<em class="var">ab</em></div></li>
+      <li><span class="opt-letter">D</span><div>4<em class="var">a</em><sup>2</sup><em class="var">b</em></div></li>
+    </ul>
+  </article>
+
+  <!-- 15 -->
+  <article class="q" id="soal-15">
+    <div class="q-head"><div class="q-no">15</div><div class="q-badges"><span class="badge mcma">MCMA</span><span class="badge mat">Mengenal Bentuk Aljabar</span></div></div>
+    <div class="q-stem"><p>Perhatikan bentuk aljabar 3<em class="var">p</em> + 2<em class="var">q</em> − 5. Pilih <strong>semua</strong> pernyataan yang benar.</p></div>
+    <ul class="stmts">
+      <li><span class="stmt-no">(1)</span><div>Bentuk aljabar tersebut terdiri atas 3 suku.</div></li>
+      <li><span class="stmt-no">(2)</span><div>Variabelnya adalah <em class="var">p</em> dan <em class="var">q</em>.</div></li>
+      <li><span class="stmt-no">(3)</span><div>Konstantanya adalah −5.</div></li>
+      <li><span class="stmt-no">(4)</span><div>Koefisien dari <em class="var">q</em> adalah 3.</div></li>
+    </ul>
+    <p class="hint">Tuliskan nomor pernyataan yang benar pada lembar jawaban.</p>
+  </article>
+
+  <!-- LEMBAR JAWABAN -->
+  <section class="panel" id="lembar-jawaban" style="margin-top:30px">
+    <h2>Lembar Jawaban — Nomor 1–15</h2>
+    <p class="note">Untuk soal PG, tulis huruf jawabanmu. Untuk soal MCMA, tulis nomor pernyataan yang benar. Untuk soal Benar–Salah, tulis B atau S pada setiap baris a–d.</p>
+    <div class="ans-grid">
+      <table class="ans">
+        <thead><tr><th style="width:52px;text-align:center">No.</th><th>Jawaban</th></tr></thead>
+        <tbody>
+          <tr><td class="no">1</td><td class="cell"></td></tr>
+          <tr><td class="no">2</td><td class="cell"></td></tr>
+          <tr><td class="no">3</td><td class="cell"></td></tr>
+          <tr><td class="no">4</td><td class="cell"></td></tr>
+          <tr><td class="no">5</td><td class="cell" style="font-size:13px;color:var(--muted)">a: ___ &nbsp; b: ___ &nbsp; c: ___ &nbsp; d: ___</td></tr>
+          <tr><td class="no">6</td><td class="cell"></td></tr>
+          <tr><td class="no">7</td><td class="cell"></td></tr>
+          <tr><td class="no">8</td><td class="cell"></td></tr>
+        </tbody>
+      </table>
+      <table class="ans">
+        <thead><tr><th style="width:52px;text-align:center">No.</th><th>Jawaban</th></tr></thead>
+        <tbody>
+          <tr><td class="no">9</td><td class="cell" style="font-size:13px;color:var(--muted)">a: ___ &nbsp; b: ___ &nbsp; c: ___ &nbsp; d: ___</td></tr>
+          <tr><td class="no">10</td><td class="cell"></td></tr>
+          <tr><td class="no">11</td><td class="cell"></td></tr>
+          <tr><td class="no">12</td><td class="cell"></td></tr>
+          <tr><td class="no">13</td><td class="cell"></td></tr>
+          <tr><td class="no">14</td><td class="cell"></td></tr>
+          <tr><td class="no">15</td><td class="cell"></td></tr>
+          <tr><td class="no" style="background:var(--accent-soft);color:var(--muted)">—</td><td class="cell" style="color:var(--muted);font-size:13.5px">Selesai untuk File 1 ✓</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:12px">Untuk mencetak: gunakan menu <strong>Cetak / Print</strong> di browser, lalu pilih kertas A4. Halaman ini sudah diatur rapi untuk dicetak.</p>
+  </section>
+
+  <div class="next-box">
+    <div>
+      <h3>Sudah selesai No. 1–15?</h3>
+      <p>Lanjutkan ke File 2 untuk Nomor 16–30: lanjutan Bentuk Aljabar (No. 16–21) dan Persamaan &amp; Pertidaksamaan Linear Satu Variabel (No. 22–30).</p>
+    </div>
+    <span class="tag">Selanjutnya → File 2 • No. 16–30</span>
+  </div>
+
+  <footer>Bank Soal Matematika Kelas 7 — Bab 1–3 • Versi Siswa (Tanpa Kunci Jawaban) • File 1: Nomor 1–15 &nbsp;—&nbsp; Selamat belajar</footer>
+
+</div>
+</body>
+</html>

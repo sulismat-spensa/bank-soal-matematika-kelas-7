@@ -1,0 +1,849 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>Bank Soal Siswa 2 Interaktif — Nomor 16–30 · Matematika Kelas 7</title>
+<style>
+  :root{
+    --bg:#f4f7fb; --surface:#ffffff; --surface2:#eef3fa;
+    --ink:#12233d; --muted:#44597a; --line:#c9d6e8;
+    --accent:#0b5fa5; --accent-ink:#ffffff;
+    --amber:#92400e; --amber-bg:#fef3c7;
+    --teal:#0f766e; --teal-bg:#ccfbf1;
+    --rose:#be123c; --rose-bg:#ffe4e6;
+    --radius:14px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0b1524; --surface:#122036; --surface2:#182a46;
+      --ink:#eef4fc; --muted:#b3c3dc; --line:#2c4468;
+      --accent:#4da3e8; --accent-ink:#081a2e;
+      --amber:#fbbf24; --amber-bg:#3a2c07;
+      --teal:#2dd4bf; --teal-bg:#07332e;
+      --rose:#fb7185; --rose-bg:#3d0f1c;
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:17px;line-height:1.65;}
+  button,[role="button"],select,summary,input:not([type="checkbox"],[type="radio"]){min-height:2rem}
+  .wrap{max-width:880px;margin:0 auto;padding:20px 16px 64px}
+  .masthead{background:var(--surface);border:2px solid var(--accent);border-radius:var(--radius);padding:22px 22px 18px}
+  .masthead .kicker{font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.78rem;color:var(--accent)}
+  .masthead h1{margin:.25em 0 .15em;font-size:1.65rem;line-height:1.25}
+  .masthead p.sub{margin:0;color:var(--muted);font-size:1rem}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .badge-versi{display:inline-block;background:var(--amber-bg);color:var(--amber);
+    font-weight:700;font-size:.85rem;padding:4px 12px;border-radius:999px;border:1px solid currentColor}
+  .badge-file{display:inline-block;background:var(--surface2);color:var(--accent);
+    font-weight:700;font-size:.85rem;padding:4px 12px;border-radius:999px;border:1px solid currentColor}
+  .identitas{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin-top:18px}
+  .identitas label{font-size:.85rem;font-weight:600;color:var(--muted);display:block}
+  .identitas .garis{border-bottom:2px dotted var(--line);min-height:30px}
+  @media (max-width:560px){.identitas{grid-template-columns:1fr}}
+  nav.lompat{position:sticky;top:0;z-index:5;background:var(--bg);padding:12px 0 8px;display:flex;flex-wrap:wrap;gap:8px}
+  nav.lompat a{display:inline-flex;align-items:center;min-height:40px;padding:6px 14px;border-radius:999px;
+    background:var(--surface);border:1.5px solid var(--line);color:var(--ink);text-decoration:none;font-weight:600;font-size:.92rem}
+  nav.lompat a:active,nav.lompat a:hover{border-color:var(--accent);color:var(--accent)}
+  section{margin-top:30px}
+  .bab-head{background:var(--accent);color:var(--accent-ink);border-radius:var(--radius);padding:16px 20px}
+  .bab-head h2{margin:0;font-size:1.3rem;line-height:1.3}
+  .bab-head p{margin:.3em 0 0;font-size:.95rem;opacity:.95}
+  .panel{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--radius);padding:18px 20px}
+  .panel h2{margin-top:0;font-size:1.2rem}
+  .panel ul{margin:.4em 0;padding-left:1.3em}
+  .panel li{margin:.25em 0}
+  .tabel-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{border-collapse:collapse;width:100%;font-size:.97rem}
+  th,td{border:1.5px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:var(--surface2);font-weight:700}
+  td.tengah,th.tengah{text-align:center}
+  .soal{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--radius);
+    padding:16px 20px 14px;margin-top:14px}
+  .soal-head{display:flex;gap:12px;align-items:flex-start}
+  .nomor{flex:0 0 auto;width:38px;height:38px;border-radius:10px;background:var(--accent);color:var(--accent-ink);
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.05rem}
+  .soal-head .isi{flex:1;min-width:0}
+  .label-tipe{display:inline-block;font-size:.76rem;font-weight:700;letter-spacing:.02em;
+    padding:2px 9px;border-radius:999px;margin-bottom:6px;border:1px solid currentColor}
+  .t-pg{background:var(--surface2);color:var(--accent)}
+  .t-mcma{background:var(--teal-bg);color:var(--teal)}
+  .t-bs{background:var(--rose-bg);color:var(--rose)}
+  .soal p{margin:.2em 0 .6em}
+  .m{font-family:"Cambria Math","STIX Two Math",Georgia,serif;font-style:normal;white-space:nowrap}
+  .m i{font-style:italic}
+  .frac{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;margin:0 .12em;line-height:1.1;font-size:.88em}
+  .frac .num{border-bottom:1.5px solid currentColor;padding:0 .28em 1px}
+  .frac .den{padding:1px .28em 0}
+  ol.pilihan{list-style:none;margin:.4em 0 .2em;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 22px}
+  @media (max-width:560px){ol.pilihan{grid-template-columns:1fr}}
+  ol.pilihan li{display:flex;gap:9px;align-items:baseline;padding:5px 8px;border-radius:8px}
+  ol.pilihan li b{flex:0 0 auto;width:26px;height:26px;border:1.5px solid var(--line);border-radius:50%;
+    display:inline-flex;align-items:center;justify-content:center;font-size:.85rem;background:var(--surface2)}
+  ol.pernyataan{margin:.4em 0 .2em;padding-left:1.6em}
+  ol.pernyataan li{margin:.35em 0}
+  .catatan{font-size:.9rem;color:var(--muted);font-style:italic;margin:.5em 0 0}
+  .tabel-bs td.bs{white-space:nowrap;font-weight:700;text-align:center}
+  .lj-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
+  @media (max-width:560px){.lj-grid{grid-template-columns:1fr}}
+  .lj-grid table{margin-bottom:14px}
+  .lj-grid td.jawab{height:38px}
+  .ringkas{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+  @media (max-width:560px){.ringkas{grid-template-columns:1fr}}
+  .ringkas .kotak{background:var(--surface2);border-radius:10px;padding:12px 14px;text-align:center}
+  .ringkas .kotak strong{display:block;font-size:1.35rem;line-height:1.2;color:var(--accent)}
+  .ringkas .kotak span{font-size:.88rem;color:var(--muted)}
+  footer{margin-top:36px;text-align:center;color:var(--muted)}
+  /* ===== Mode interaktif: jawab dengan klik ===== */
+  .identitas input{width:100%;border:none;border-bottom:2px dotted var(--line);background:transparent;
+    color:var(--ink);font:inherit;font-size:1rem;padding:2px 2px 4px;border-radius:0}
+  .identitas input:focus{outline:none;border-bottom:2px solid var(--accent)}
+  .identitas .skor-box{border-bottom:2px dotted var(--line);min-height:30px;font-weight:800;color:var(--accent);font-size:1.05rem}
+  .toolbar{flex-basis:100%;background:var(--surface);border:1.5px solid var(--line);border-radius:12px;
+    padding:10px 14px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+  .toolbar .prog-teks{font-weight:800;font-size:.95rem;white-space:nowrap}
+  .prog{flex:1 1 140px;height:12px;background:var(--surface2);border-radius:999px;overflow:hidden;border:1px solid var(--line)}
+  .prog i{display:block;height:100%;width:0;background:var(--accent);transition:width .25s ease}
+  .btn{appearance:none;border:1.5px solid var(--accent);background:var(--accent);color:var(--accent-ink);
+    font:inherit;font-weight:700;font-size:.95rem;padding:9px 18px;border-radius:999px;cursor:pointer;min-height:44px}
+  .btn.sekunder{background:var(--surface);color:var(--accent)}
+  .btn:active{transform:translateY(1px)}
+  .status-soal{display:inline-block;font-size:.76rem;font-weight:700;padding:2px 9px;border-radius:999px;
+    margin:0 0 6px 6px;border:1px solid var(--line);color:var(--muted);background:var(--surface2);vertical-align:2px}
+  .status-soal.sudah{background:var(--teal-bg);color:var(--teal);border-color:currentColor}
+  ol.pilihan li,ol.pernyataan li{cursor:pointer}
+  ol.pilihan li{border:1.5px solid transparent}
+  ol.pilihan li:hover,ol.pernyataan li:hover{border-color:var(--accent)}
+  ol.pilihan li:focus-visible,ol.pernyataan li:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  ol.pilihan li.terpilih{background:var(--surface2);border-color:var(--accent);font-weight:600}
+  ol.pilihan li.terpilih b{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+  ol.pernyataan{list-style:none;padding-left:0}
+  ol.pernyataan li{display:flex;gap:10px;align-items:flex-start;padding:7px 9px;border-radius:8px;border:1.5px solid transparent;margin:.2em 0}
+  ol.pernyataan li .no-per{flex:0 0 auto;font-weight:700}
+  ol.pernyataan li .centang{flex:0 0 auto;width:24px;height:24px;margin-top:2px;border:2px solid var(--line);border-radius:6px;
+    display:inline-flex;align-items:center;justify-content:center;font-weight:800;color:transparent;background:var(--surface)}
+  ol.pernyataan li.terpilih{background:var(--teal-bg);border-color:var(--teal);font-weight:600}
+  ol.pernyataan li.terpilih .centang{background:var(--teal);border-color:var(--teal);color:#fff}
+  .bs-pilih{display:flex;gap:8px;justify-content:center}
+  .bs-btn{appearance:none;width:44px;height:44px;border-radius:10px;border:2px solid var(--line);background:var(--surface);
+    color:var(--ink);font:inherit;font-weight:800;font-size:1rem;cursor:pointer}
+  .bs-btn.terpilih{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+  td.jawab{font-weight:700}
+  td.jawab.kosong{color:var(--muted);font-weight:400}
+  .soal.terkunci ol.pilihan li,.soal.terkunci ol.pernyataan li{cursor:default}
+  .soal.terkunci .bs-btn{cursor:default}
+  li.benar,li.salah{font-weight:600}
+  li.benar{background:var(--teal-bg)!important;border-color:var(--teal)!important}
+  li.salah{background:var(--rose-bg)!important;border-color:var(--rose)!important}
+  li.kunci-benar{border-color:var(--teal)!important;box-shadow:inset 0 0 0 1.5px var(--teal)}
+  .bs-btn.kunci-benar{border-color:var(--teal);box-shadow:inset 0 0 0 1.5px var(--teal);color:var(--teal)}
+  .bs-btn.benar{background:var(--teal);border-color:var(--teal);color:#fff}
+  .bs-btn.salah{background:var(--rose);border-color:var(--rose);color:#fff}
+  .hasil-box{margin-top:16px;border:2px solid var(--accent);border-radius:12px;padding:16px 18px;background:var(--surface2)}
+  .hasil-box .skor-besar{font-size:2.4rem;font-weight:800;line-height:1.1;color:var(--accent)}
+  .hasil-box p{margin:.35em 0}
+  .peringatan{border-color:var(--rose);background:var(--rose-bg)}
+  .pembahasan{display:none;margin-top:12px;border-top:1.5px dashed var(--line);padding-top:10px;font-size:.95rem}
+  .pembahasan.tampil{display:block}
+  .pembahasan .kunci{font-weight:800}
+  .badge-hasil{display:inline-block;font-size:.78rem;font-weight:800;padding:2px 10px;border-radius:999px;margin:0 0 6px 6px;border:1px solid currentColor;vertical-align:2px}
+  .badge-hasil.b{background:var(--teal-bg);color:var(--teal)}
+  .badge-hasil.s{background:var(--rose-bg);color:var(--rose)}
+  .badge-hasil.seb{background:var(--amber-bg);color:var(--amber)}
+  .aksi-bawah{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+  @media (prefers-reduced-motion: reduce){.prog i{transition:none}}
+  @media print{
+    body{background:#fff;color:#000;font-size:12.5pt}
+    nav.lompat,.toolbar,.aksi-bawah,.btn{display:none}
+    .pembahasan{display:none!important}
+    .soal,.panel,.masthead{break-inside:avoid;border-color:#999}
+    .bab-head{background:#fff;color:#000;border:2px solid #000}
+    .nomor{background:#fff;color:#000;border:2px solid #000}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="kicker">Bank Soal Matematika &bull; Kelas 7 SMP &bull; File 2 dari 2</div>
+    <h1>Soal Nomor 16–30</h1>
+    <p class="sub">Bab 2 Bentuk Aljabar (lanjutan) &bull; Bab 3 Persamaan dan Pertidaksamaan Linear Satu Variabel</p>
+    <div class="badges">
+      <span class="badge-versi">Versi Siswa Interaktif — Jawab Langsung dengan Klik</span>
+      <span class="badge-file">15 soal &middot; No. 16–30</span>
+    </div>
+    <div class="identitas">
+      <div><label for="inNama">Nama Siswa</label><input id="inNama" type="text" autocomplete="name" placeholder="Tulis namamu di sini" /></div>
+      <div><label for="inKelas">Kelas</label><input id="inKelas" type="text" placeholder="Contoh: 7A" /></div>
+      <div><label for="inTanggal">Tanggal</label><input id="inTanggal" type="date" /></div>
+      <div><label>Nilai Kamu</label><div class="skor-box" id="skorIdentitas">—</div></div>
+    </div>
+    <div class="ringkas" aria-label="Ringkasan isi file ini">
+      <div class="kotak"><strong>6 soal</strong><span>Bab 2 &middot; No. 16–21</span></div>
+      <div class="kotak"><strong>9 soal</strong><span>Bab 3 &middot; No. 22–30</span></div>
+      <div class="kotak"><strong>15 soal</strong><span>Total file ini</span></div>
+    </div>
+  </header>
+
+  <nav class="lompat" aria-label="Lompat ke bagian">
+    <a href="#petunjuk">Petunjuk</a>
+    <a href="#bab2">Bab 2 &middot; No. 16–21</a>
+    <a href="#bab3">Bab 3 &middot; No. 22–30</a>
+    <a href="#lembar">Lembar Jawaban</a>
+    <div class="toolbar" aria-label="Kemajuan pengerjaan">
+      <span class="prog-teks" id="progTeks">0/15 terjawab</span>
+      <span class="prog" role="progressbar" aria-label="Kemajuan menjawab" aria-valuemin="0" aria-valuemax="15" aria-valuenow="0" id="progBarBungkus"><i id="progBar"></i></span>
+      <button type="button" class="btn sekunder" id="btnUlangiAtas">Ulangi</button>
+      <button type="button" class="btn" id="btnSelesaiAtas">Selesai &amp; Lihat Nilai</button>
+    </div>
+  </nav>
+
+  <section id="petunjuk" class="panel">
+    <h2>Petunjuk Pengerjaan</h2>
+    <ul>
+      <li>File ini adalah <strong>bagian kedua</strong> untuk siswa: soal <strong>Nomor 16–30</strong>. Nomor 1–15 ada di File 1.</li>
+      <li>Isi dulu nama dan kelasmu di bagian atas, lalu bacalah setiap soal dengan teliti sebelum menjawab.</li>
+      <li><strong>Cara menjawab: cukup klik jawabanmu langsung pada soal.</strong> Pilihan yang kamu klik akan berubah warna.</li>
+      <li><strong>Soal Pilihan Ganda (PG):</strong> klik satu jawaban yang paling tepat (A, B, C, atau D). Klik pilihan lain untuk mengganti jawaban.</li>
+      <li><strong>Soal MCMA (Pilihan Ganda Kompleks):</strong> klik semua pernyataan yang benar — jawaban benar dapat lebih dari satu. Klik lagi untuk membatalkan pilihan.</li>
+      <li><strong>Soal Benar–Salah:</strong> pada setiap baris a–d, klik tombol <strong>B</strong> jika pernyataan benar atau <strong>S</strong> jika salah.</li>
+      <li>Kemajuanmu terlihat di bilah atas (<strong>0/15 terjawab</strong>) dan jawabanmu otomatis tercatat di <a href="#lembar">Lembar Jawaban</a> di bawah.</li>
+      <li>Jika semua soal sudah dijawab, klik tombol <strong>“Selesai &amp; Lihat Nilai”</strong> untuk melihat nilaimu beserta jawaban yang benar.</li>
+    </ul>
+  </section>
+
+  <!-- ================= BAB 2 (lanjutan) ================= -->
+  <section id="bab2">
+    <div class="bab-head">
+      <h2>Bab 2 — Bentuk Aljabar <span style="font-weight:400">(lanjutan)</span></h2>
+      <p>Nomor 16–21 &middot; Materi: operasi hitung bentuk aljabar dan penerapannya. Nomor 13–15 ada di File 1.</p>
+    </div>
+
+    <article class="soal"><div class="soal-head"><div class="nomor">16</div><div class="isi">
+      <span class="label-tipe t-bs">Benar–Salah — Operasi Hitung Bentuk Aljabar</span>
+      <p>Tentukan Benar (B) atau Salah (S) untuk setiap pernyataan berikut.</p>
+      <div class="tabel-scroll"><table>
+        <thead><tr><th class="tengah">No.</th><th>Pernyataan</th><th class="tengah">Benar / Salah</th></tr></thead>
+        <tbody>
+          <tr><td class="tengah">a</td><td><span class="m">2<i>x</i> + 3<i>x</i> = 5<i>x</i></span></td><td class="bs">B &nbsp;/&nbsp; S</td></tr>
+          <tr><td class="tengah">b</td><td><span class="m">4<i>a</i> − 2<i>a</i> = 2<i>a</i></span></td><td class="bs">B &nbsp;/&nbsp; S</td></tr>
+          <tr><td class="tengah">c</td><td><span class="m"><i>x</i> + <i>x</i> = <i>x</i><sup>2</sup></span></td><td class="bs">B &nbsp;/&nbsp; S</td></tr>
+          <tr><td class="tengah">d</td><td><span class="m">3(<i>x</i> + 2) = 3<i>x</i> + 6</span></td><td class="bs">B &nbsp;/&nbsp; S</td></tr>
+        </tbody>
+      </table></div>
+    </div></div></article>
+
+    <article class="soal"><div class="soal-head"><div class="nomor">17</div><div class="isi">
+      <span class="label-tipe t-pg">PG — Operasi Hitung Bentuk Aljabar</span>
+      <p>Hasil dari <span class="m">(7<i>a</i> + 3<i>b</i>) + (2<i>a</i> − 5<i>b</i>)</span> adalah &hellip;</p>
+      <ol class="pilihan">
+        <li><b>A</b><span><span class="m">9<i>a</i> + 8<i>b</i></span></span></li>
+        <li><b>B</b><span><span class="m">9<i>a</i> − 2<i>b</i></span></span></li>
+        <li><b>C</b><span><span class="m">5<i>a</i> − 2<i>b</i></span></span></li>
+        <li><b>D</b><span><span class="m">9<i>a</i> + 2<i>b</i></span></span></li>
+      </ol>
+    </div></div></article>
+
+    <article class="soal"><div class="soal-head"><div class="nomor">18</div><div class="isi">
+      <span class="label-tipe t-pg">PG &bull; Numerasi — Operasi Hitung Bentuk Aljabar</span>
+      <p>Hasil dari <span class="m">3(2<i>x</i> − 4) − 2<i>x</i></span> adalah &hellip;</p>
+      <ol class="pilihan">
+        <li><b>A</b><span><span class="m">4<i>x</i> − 12</span></span></li>
+        <li><b>B</b><span><span class="m">4<i>x</i> − 4</span></span></li>
+        <li><b>C</b><span><span class="m">8<i>x</i> − 12</span></span></li>
+        <li><b>D</b><span><span class="m">6<i>x</i> − 14</span></span></li>
+      </ol>
+    </div></div></article>
+
+    <article class="soal"><div class="soal-head"><div class="nomor">19</div><div class="isi">
+      <span class="label-tipe t-pg">PG &bull; Soal Cerita — Operasi Hitung Bentuk Aljabar</span>
+      <p>Sebuah persegi panjang mempunyai panjang <span class="m">(<i>x</i> + 5)</span> cm dan lebar <span class="m"><i>x</i></span> cm. Keliling persegi panjang tersebut adalah &hellip;</p>
+      <ol class="pilihan">
+        <li><b>A</b><span><span class="m">(2<i>x</i> + 5)</span> cm</span></li>
+        <li><b>B</b><span><span class="m">(3<i>x</i> + 5)</span> cm</span></li>
+        <li><b>C</b><span><span class="m">(4<i>x</i> + 10)</span> cm</span></li>
+        <li><b>D</b><span><span class="m">(<i>x</i><sup>2</sup> + 5<i>x</i>)</span> cm</span></li>
+      </ol>
+    </div></div></article>
+
+    <article class="soal"><div class="soal-head"><div class="nomor">20</div><div class="isi">
+      <span class="label-tipe t-mcma">MCMA &bull; Numerasi — Operasi Hitung Bentuk Aljabar</span>
+      <p>Jika <span class="m"><i>x</i> = 3</span>, pilih semua pernyataan yang benar.</p>
+      <ol class="pernyataan">
+        <li>Nilai <span class="m">2<i>x</i> + 1</span> adalah 7.</li>
+        <li>Nilai <span class="m"><i>x</i><sup>2</sup> − 4</span> adalah 5.</li>
+        <li>Nilai <span class="m">5<i>x</i> − 2</span> adalah 13.</li>
+        <li>Nilai <span class="m">3<i>x</i> + 4</span> adalah 12.</li>
+      </ol>
+      <p class="catatan">Tuliskan nomor pernyataan yang benar, misalnya (1), (2), dan (3).</p>
+    </div></div></article>
+
+    <article class="soal"><div class="soal-head"><div class="nomor">21</div><div class="isi">
+      <span class="label-tipe t-pg">PG &bull; Soal Cerita — Mengenal Bentuk Aljabar</span>
+      <p>Harga sebuah buku adalah <span class="m"><i>x</i></span> rupiah dan harga sebuah pensil adalah <span class="m"><i>y</i></span> rupiah. Bentuk aljabar untuk harga 3 buku dan 2 pensil adalah &hellip;</p>
+      <ol class="pilihan">
+        <li><b>A</b><span><span class="m">5<i>xy</i></span></span></li>
+        <li><b>B</b><span><span class="m">3<i>x</i> + 2<i>y</i></span></span></li>
+        <li><b>C</b><span><span class="m">2<i>x</i> + 3<i>y</i></span></span></li>
+        <li><b>D</b><span><span class="m">6<i>xy</i></span></span></li>
+      </ol>
+    </div></div></article>
+  </section>
+
+  <!-- ================= BAB 3 ================= -->
+  <section id="bab3">
+    <div class="bab-head">
+      <h2>Bab 3 — Persamaan dan Pertidaksamaan Linear Satu Variabel</h2>
+      <p>Nomor 22–30 &middot; Materi: persamaan dan pertidaksamaan linear satu variabel serta menyelesaikan masalah sehari-hari.</p>
+    </div>
+
+    <article class="soal"><div class="soal-head"><div class="nomor">22</div><div class="isi">
+      <span class="label-tipe t-pg">PG — Persamaan Linear Satu Variabel</span>
+      <p>Nilai <span class="m"><i>x</i></span> yang memenuhi persamaan <span class="m">3<i>x</i> + 5 = 20</span> adalah &hellip;</p>
+      <ol class="pilihan">
+        <li><b>A</b><span>3</span></li>
+        <li><b>B</b><span>4</span></li>
+        <li><b>C</b><span>5</span></li>
+        <li><b>D</b><span>8</span></li>
+      </ol>
+    </div></div></article>
+
+    <article class="soal"><div class="soal-head"><div class="nomor">23</div><div class="isi">
+      <span class="label-tipe t-pg">PG — Pertidaksamaan Linear Satu Variabel</span>
+      <p>Penyelesaian dari pertidaksamaan <span class="m"><i>x</i> − 4 &lt; 7</span> adalah &hellip;</p>
+      <ol class="pilihan">
+        <li><b>A</b><span><span class="m"><i>x</i> &lt; 3</span></span></li>
+        <li><b>B</b><span><span class="m"><i>x</i> &lt; 11</span></span></li>
+        <li><b>C</b><span><span class="m"><i>x</i> &gt; 11</span></span></li>
+        <li><b>D</b><span><span class="m"><i>x</i> &lt; −3</span></span></li>
+      </ol>
+    </div></div></article>
+
+    <article class="soal"><div class="soal-head"><div class="nomor">24</div><div class="isi">
+      <span class="label-tipe t-mcma">MCMA — Persamaan Linear Satu Variabel</span>
+      <p>Pilih semua persamaan yang penyelesaiannya adalah <span class="m"><i>x</i> = 4</span>.</p>
+      <ol class="pernyataan">
+        <li><span class="m">2<i>x</i> = 8</span></li>
+        <li><span class="m"><i>x</i> + 3 = 7</span></li>
+        <li><span class="m">5<i>x</i> − 4 = 16</span></li>
+        <li><span class="m">3<i>x</i> + 1 = 10</span></li>
+      </ol>
+      <p class="catatan">Tuliskan nomor pernyataan yang benar, misalnya (1), (2), dan (3).</p>
+    </div></div></article>
+
+    <article class="soal"><div class="soal-head"><div class="nomor">25</div><div class="isi">
+      <span class="label-tipe t-bs">Benar–Salah — Pertidaksamaan Linear Satu Variabel</span>
+      <p>Tentukan Benar (B) atau Salah (S) untuk setiap pernyataan berikut.</p>
+      <div class="tabel-scroll"><table>
+        <thead><tr><th class="tengah">No.</th><th>Pernyataan</th><th class="tengah">Benar / Salah</th></tr></thead>
+        <tbody>
+          <tr><td class="tengah">a</td><td>4 adalah penyelesaian dari <span class="m"><i>x</i> &gt; 3</span>.</td><td class="bs">B &nbsp;/&nbsp; S</td></tr>
+          <tr><td class="tengah">b</td><td>Penyelesaian dari <span class="m">2<i>x</i> ≤ 10</span> adalah <span class="m"><i>x</i> ≤ 5</span>.</td><td class="bs">B &nbsp;/&nbsp; S</td></tr>
+          <tr><td class="tengah">c</td><td>Penyelesaian dari <span class="m"><i>x</i> + 2 &gt; 5</span> adalah <span class="m"><i>x</i> &gt; 7</span>.</td><td class="bs">B &nbsp;/&nbsp; S</td></tr>
+          <tr><td class="tengah">d</td><td>5 adalah penyelesaian dari <span class="m"><i>x</i> − 1 ≥ 6</span>.</td><td class="bs">B &nbsp;/&nbsp; S</td></tr>
+        </tbody>
+      </table></div>
+    </div></div></article>
+
+    <article class="soal"><div class="soal-head"><div class="nomor">26</div><div class="isi">
+      <span class="label-tipe t-pg">PG &bull; Numerasi — Persamaan Linear Satu Variabel</span>
+      <p>Nilai <span class="m"><i>x</i></span> yang memenuhi persamaan <span class="m">5<i>x</i> − 7 = 3<i>x</i> + 9</span> adalah &hellip;</p>
+      <ol class="pilihan">
+        <li><b>A</b><span>2</span></li>
+        <li><b>B</b><span>4</span></li>
+        <li><b>C</b><span>8</span></li>
+        <li><b>D</b><span>16</span></li>
+      </ol>
+    </div></div></article>
+
+    <article class="soal"><div class="soal-head"><div class="nomor">27</div><div class="isi">
+      <span class="label-tipe t-pg">PG &bull; Soal Cerita — Menyelesaikan Masalah (PLSV)</span>
+      <p>Uang Sinta setelah ditambah Rp15.000,00 menjadi Rp65.000,00. Uang Sinta mula-mula adalah &hellip;</p>
+      <ol class="pilihan">
+        <li><b>A</b><span>Rp40.000,00</span></li>
+        <li><b>B</b><span>Rp50.000,00</span></li>
+        <li><b>C</b><span>Rp65.000,00</span></li>
+        <li><b>D</b><span>Rp80.000,00</span></li>
+      </ol>
+    </div></div></article>
+
+    <article class="soal"><div class="soal-head"><div class="nomor">28</div><div class="isi">
+      <span class="label-tipe t-pg">PG &bull; Soal Cerita — Menyelesaikan Masalah (PtLSV)</span>
+      <p>Untuk lulus seleksi, seorang siswa harus mengumpulkan poin minimal 80. Raka sudah mengumpulkan 55 poin. Poin tambahan paling sedikit yang harus dikumpulkan Raka agar lulus adalah &hellip;</p>
+      <ol class="pilihan">
+        <li><b>A</b><span>20 poin</span></li>
+        <li><b>B</b><span>25 poin</span></li>
+        <li><b>C</b><span>35 poin</span></li>
+        <li><b>D</b><span>55 poin</span></li>
+      </ol>
+    </div></div></article>
+
+    <article class="soal"><div class="soal-head"><div class="nomor">29</div><div class="isi">
+      <span class="label-tipe t-mcma">MCMA &bull; Soal Cerita — Menyelesaikan Masalah (PLSV)</span>
+      <p>Harga 4 pensil yang harganya sama adalah Rp20.000,00. Pilih semua pernyataan yang benar.</p>
+      <ol class="pernyataan">
+        <li>Model matematikanya adalah <span class="m">4<i>x</i> = 20.000</span>, dengan <span class="m"><i>x</i></span> adalah harga 1 pensil.</li>
+        <li>Harga 1 pensil adalah Rp5.000,00.</li>
+        <li>Harga 7 pensil adalah Rp35.000,00.</li>
+        <li>Harga 10 pensil adalah Rp45.000,00.</li>
+      </ol>
+      <p class="catatan">Tuliskan nomor pernyataan yang benar, misalnya (1), (2), dan (3).</p>
+    </div></div></article>
+
+    <article class="soal"><div class="soal-head"><div class="nomor">30</div><div class="isi">
+      <span class="label-tipe t-pg">PG &bull; Soal Cerita &bull; Numerasi — Menyelesaikan Masalah (PLSV)</span>
+      <p>Dedi membeli 3 buku dengan harga yang sama. Setelah ditambah ongkos kirim Rp10.000,00, total yang dibayar Dedi adalah Rp70.000,00. Harga 1 buku adalah &hellip;</p>
+      <ol class="pilihan">
+        <li><b>A</b><span>Rp15.000,00</span></li>
+        <li><b>B</b><span>Rp20.000,00</span></li>
+        <li><b>C</b><span>Rp25.000,00</span></li>
+        <li><b>D</b><span>Rp30.000,00</span></li>
+      </ol>
+    </div></div></article>
+  </section>
+
+  <!-- ================= LEMBAR JAWABAN ================= -->
+  <section id="lembar" class="panel">
+    <h2>Lembar Jawaban — No. 16–30</h2>
+    <p>Tabel ini <strong>terisi otomatis</strong> dari jawaban yang kamu klik pada soal. Untuk soal PG tampil huruf jawabanmu, untuk soal MCMA tampil nomor pernyataan yang kamu pilih, dan untuk soal Benar–Salah tampil B atau S pada setiap baris a–d.</p>
+    <div class="lj-grid">
+      <table>
+        <thead><tr><th class="tengah">No.</th><th>Jawaban</th></tr></thead>
+        <tbody>
+          <tr><td class="tengah"><strong>16</strong></td><td class="jawab"></td></tr>
+          <tr><td class="tengah"><strong>17</strong></td><td class="jawab"></td></tr>
+          <tr><td class="tengah"><strong>18</strong></td><td class="jawab"></td></tr>
+          <tr><td class="tengah"><strong>19</strong></td><td class="jawab"></td></tr>
+          <tr><td class="tengah"><strong>20</strong></td><td class="jawab"></td></tr>
+          <tr><td class="tengah"><strong>21</strong></td><td class="jawab"></td></tr>
+          <tr><td class="tengah"><strong>22</strong></td><td class="jawab"></td></tr>
+          <tr><td class="tengah"><strong>23</strong></td><td class="jawab"></td></tr>
+        </tbody>
+      </table>
+      <table>
+        <thead><tr><th class="tengah">No.</th><th>Jawaban</th></tr></thead>
+        <tbody>
+          <tr><td class="tengah"><strong>24</strong></td><td class="jawab"></td></tr>
+          <tr><td class="tengah"><strong>25</strong></td><td class="jawab"></td></tr>
+          <tr><td class="tengah"><strong>26</strong></td><td class="jawab"></td></tr>
+          <tr><td class="tengah"><strong>27</strong></td><td class="jawab"></td></tr>
+          <tr><td class="tengah"><strong>28</strong></td><td class="jawab"></td></tr>
+          <tr><td class="tengah"><strong>29</strong></td><td class="jawab"></td></tr>
+          <tr><td class="tengah"><strong>30</strong></td><td class="jawab"></td></tr>
+          <tr><td class="tengah">&nbsp;</td><td class="jawab"></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="catatan">Periksa kembali jawabanmu sebelum menekan tombol selesai. Pastikan setiap nomor 16–30 sudah terisi.</p>
+    <div class="aksi-bawah">
+      <button type="button" class="btn" id="btnSelesai">Selesai &amp; Lihat Nilai</button>
+      <button type="button" class="btn sekunder" id="btnUlangi">Ulangi dari Awal</button>
+      <button type="button" class="btn sekunder" id="btnUnduh" hidden>Unduh Jawabanku (.txt)</button>
+    </div>
+    <div id="hasil"></div>
+  </section>
+
+  <footer><p><em>&mdash; Selamat belajar &mdash;</em></p></footer>
+</div>
+<script>
+(function(){
+  "use strict";
+  var KEYS = {
+    16:{type:"bs", key:["B","B","S","B"], bahas:"a) 2x + 3x = 5x (Benar). b) 4a \u2212 2a = 2a (Benar). c) x + x = 2x, bukan x\u00B2 (Salah). d) 3(x + 2) = 3x + 6 (Benar)."},
+    17:{type:"pg", key:"B", bahas:"7a + 2a = 9a dan 3b \u2212 5b = \u22122b, jadi hasilnya 9a \u2212 2b."},
+    18:{type:"pg", key:"A", bahas:"3(2x \u2212 4) \u2212 2x = 6x \u2212 12 \u2212 2x = 4x \u2212 12."},
+    19:{type:"pg", key:"C", bahas:"Keliling = 2 \u00D7 (panjang + lebar) = 2 \u00D7 ((x + 5) + x) = 2 \u00D7 (2x + 5) = 4x + 10 cm."},
+    20:{type:"mcma", key:[1,2,3], bahas:"Untuk x = 3: 2x + 1 = 7, x\u00B2 \u2212 4 = 5, dan 5x \u2212 2 = 13 benar; sedangkan 3x + 4 = 13, bukan 12."},
+    21:{type:"pg", key:"B", bahas:"3 buku = 3x dan 2 pensil = 2y, jadi harga seluruhnya 3x + 2y."},
+    22:{type:"pg", key:"C", bahas:"3x + 5 = 20 \u2192 3x = 15 \u2192 x = 5."},
+    23:{type:"pg", key:"B", bahas:"x \u2212 4 < 7 \u2192 x < 7 + 4 \u2192 x < 11."},
+    24:{type:"mcma", key:[1,2,3], bahas:"x = 4 memenuhi 2x = 8, x + 3 = 7, dan 5x \u2212 4 = 16; sedangkan 3(4) + 1 = 13, bukan 10."},
+    25:{type:"bs", key:["B","B","S","S"], bahas:"a) 4 > 3 (Benar). b) 2x \u2264 10 \u2192 x \u2264 5 (Benar). c) x + 2 > 5 \u2192 x > 3, bukan x > 7 (Salah). d) x \u2212 1 \u2265 6 \u2192 x \u2265 7, jadi 5 bukan penyelesaian (Salah)."},
+    26:{type:"pg", key:"C", bahas:"5x \u2212 7 = 3x + 9 \u2192 2x = 16 \u2192 x = 8."},
+    27:{type:"pg", key:"B", bahas:"Uang mula-mula = Rp65.000,00 \u2212 Rp15.000,00 = Rp50.000,00."},
+    28:{type:"pg", key:"B", bahas:"Poin tambahan paling sedikit = 80 \u2212 55 = 25 poin."},
+    29:{type:"mcma", key:[1,2,3], bahas:"Harga 1 pensil = Rp20.000,00 \u00F7 4 = Rp5.000,00 dan 7 pensil = Rp35.000,00; sedangkan 10 pensil = Rp50.000,00, bukan Rp45.000,00."},
+    30:{type:"pg", key:"B", bahas:"Harga 3 buku = Rp70.000,00 \u2212 Rp10.000,00 = Rp60.000,00, jadi harga 1 buku = Rp60.000,00 \u00F7 3 = Rp20.000,00."}
+  };
+  var NOMOR = [16,17,18,19,20,21,22,23,24,25,26,27,28,29,30];
+  var HURUF_BS = ["a","b","c","d"];
+  var state = {};
+  var graded = false;
+  var forceFinish = false;
+  var lastScore = null;
+
+  function el(id){ return document.getElementById(id); }
+
+  /* ---------- Siapkan setiap soal ---------- */
+  var soalEls = {};
+  Array.prototype.forEach.call(document.querySelectorAll(".soal"), function(art){
+    var no = parseInt(art.querySelector(".nomor").textContent.trim(), 10);
+    var info = KEYS[no];
+    if(!info) return;
+    soalEls[no] = art;
+    art.setAttribute("data-no", no);
+
+    var label = art.querySelector(".label-tipe");
+    var st = document.createElement("span");
+    st.className = "status-soal"; st.id = "status-" + no; st.textContent = "Belum dijawab";
+    label.parentNode.insertBefore(st, label.nextSibling);
+
+    var pb = document.createElement("div");
+    pb.className = "pembahasan"; pb.id = "bahas-" + no;
+    art.querySelector(".isi").appendChild(pb);
+
+    if(info.type === "pg"){
+      state[no] = {type:"pg", val:null};
+      Array.prototype.forEach.call(art.querySelectorAll("ol.pilihan li"), function(li){
+        var huruf = li.querySelector("b").textContent.trim();
+        li.setAttribute("tabindex","0"); li.setAttribute("role","button");
+        li.setAttribute("aria-pressed","false"); li.setAttribute("data-huruf", huruf);
+        function pick(){
+          if(graded) return;
+          state[no].val = huruf; forceFinish = false; refresh();
+        }
+        li.addEventListener("click", pick);
+        li.addEventListener("keydown", function(e){
+          if(e.key === "Enter" || e.key === " "){ e.preventDefault(); pick(); }
+        });
+      });
+    } else if(info.type === "mcma"){
+      state[no] = {type:"mcma", set:{}};
+      Array.prototype.forEach.call(art.querySelectorAll("ol.pernyataan li"), function(li, i){
+        var idx = i + 1;
+        li.setAttribute("tabindex","0"); li.setAttribute("role","button");
+        li.setAttribute("aria-pressed","false"); li.setAttribute("data-idx", idx);
+        var centang = document.createElement("span");
+        centang.className = "centang"; centang.textContent = "\u2713"; centang.setAttribute("aria-hidden","true");
+        var noper = document.createElement("span");
+        noper.className = "no-per"; noper.textContent = "(" + idx + ")";
+        li.insertBefore(noper, li.firstChild);
+        li.insertBefore(centang, li.firstChild);
+        function toggle(){
+          if(graded) return;
+          if(state[no].set[idx]){ delete state[no].set[idx]; } else { state[no].set[idx] = true; }
+          forceFinish = false; refresh();
+        }
+        li.addEventListener("click", toggle);
+        li.addEventListener("keydown", function(e){
+          if(e.key === "Enter" || e.key === " "){ e.preventDefault(); toggle(); }
+        });
+      });
+      var cat = art.querySelector(".catatan");
+      if(cat) cat.textContent = "Klik semua pernyataan yang benar. Klik lagi pada pernyataan yang sama untuk membatalkan pilihan.";
+    } else if(info.type === "bs"){
+      state[no] = {type:"bs", vals:[null,null,null,null]};
+      Array.prototype.forEach.call(art.querySelectorAll("tbody tr"), function(tr, i){
+        var td = tr.querySelector("td.bs");
+        if(!td) return;
+        td.textContent = "";
+        var bungkus = document.createElement("div");
+        bungkus.className = "bs-pilih";
+        ["B","S"].forEach(function(v){
+          var btn = document.createElement("button");
+          btn.type = "button"; btn.className = "bs-btn"; btn.textContent = v;
+          btn.setAttribute("data-val", v); btn.setAttribute("aria-pressed","false");
+          btn.setAttribute("aria-label", "Baris " + HURUF_BS[i] + ": " + (v === "B" ? "Benar" : "Salah"));
+          btn.addEventListener("click", function(){
+            if(graded) return;
+            state[no].vals[i] = v; forceFinish = false; refresh();
+          });
+          bungkus.appendChild(btn);
+        });
+        td.appendChild(bungkus);
+      });
+    }
+  });
+
+  /* ---------- Tampilan pilihan terpilih ---------- */
+  function paintSelections(){
+    NOMOR.forEach(function(no){
+      var art = soalEls[no]; if(!art) return;
+      var s = state[no];
+      if(s.type === "pg"){
+        Array.prototype.forEach.call(art.querySelectorAll("ol.pilihan li"), function(li){
+          var on = li.getAttribute("data-huruf") === s.val;
+          li.classList.toggle("terpilih", on);
+          li.setAttribute("aria-pressed", on ? "true" : "false");
+        });
+      } else if(s.type === "mcma"){
+        Array.prototype.forEach.call(art.querySelectorAll("ol.pernyataan li"), function(li){
+          var on = !!s.set[li.getAttribute("data-idx")];
+          li.classList.toggle("terpilih", on);
+          li.setAttribute("aria-pressed", on ? "true" : "false");
+        });
+      } else if(s.type === "bs"){
+        Array.prototype.forEach.call(art.querySelectorAll("tbody tr"), function(tr, i){
+          Array.prototype.forEach.call(tr.querySelectorAll(".bs-btn"), function(btn){
+            var on = btn.getAttribute("data-val") === s.vals[i];
+            btn.classList.toggle("terpilih", on);
+            btn.setAttribute("aria-pressed", on ? "true" : "false");
+          });
+        });
+      }
+    });
+  }
+
+  function isAnswered(no){
+    var s = state[no]; if(!s) return false;
+    if(s.type === "pg") return !!s.val;
+    if(s.type === "mcma") return Object.keys(s.set).length > 0;
+    if(s.type === "bs") return s.vals.every(function(v){ return !!v; });
+    return false;
+  }
+
+  function formatAnswer(no){
+    var s = state[no]; if(!s) return "\u2014";
+    if(s.type === "pg") return s.val || "\u2014";
+    if(s.type === "mcma"){
+      var arr = Object.keys(s.set).map(Number).sort(function(a,b){ return a-b; });
+      return arr.length ? arr.map(function(n){ return "(" + n + ")"; }).join(", ") : "\u2014";
+    }
+    if(s.type === "bs"){
+      if(!s.vals.some(function(v){ return !!v; })) return "\u2014";
+      return s.vals.map(function(v,i){ return HURUF_BS[i] + ". " + (v || "\u2014"); }).join("  ");
+    }
+    return "\u2014";
+  }
+
+  var lembarMap = {};
+  Array.prototype.forEach.call(document.querySelectorAll("#lembar tbody tr"), function(tr){
+    var kuat = tr.querySelector("td strong");
+    var sel = tr.querySelector("td.jawab");
+    if(kuat && sel){
+      var n = parseInt(kuat.textContent.trim(), 10);
+      if(!isNaN(n)) lembarMap[n] = sel;
+    }
+  });
+
+  function refresh(){
+    paintSelections();
+    var n = 0;
+    NOMOR.forEach(function(no){
+      var sudah = isAnswered(no);
+      if(sudah) n++;
+      var st = el("status-" + no);
+      if(st && !graded){
+        st.textContent = sudah ? "Sudah dijawab \u2713" : "Belum dijawab";
+        st.classList.toggle("sudah", sudah);
+      }
+      var sel = lembarMap[no];
+      if(sel){
+        var teks = formatAnswer(no);
+        sel.textContent = teks;
+        sel.classList.toggle("kosong", teks === "\u2014");
+      }
+    });
+    el("progTeks").textContent = n + "/15 terjawab";
+    el("progBar").style.width = (n / 15 * 100) + "%";
+    el("progBarBungkus").setAttribute("aria-valuenow", n);
+  }
+
+  /* ---------- Penilaian ---------- */
+  function gradeOne(no){
+    var info = KEYS[no], s = state[no];
+    if(info.type === "pg") return s.val === info.key ? 1 : 0;
+    if(info.type === "mcma"){
+      var arr = Object.keys(s.set).map(Number).sort(function(a,b){ return a-b; });
+      var sama = arr.length === info.key.length && arr.every(function(v,i){ return v === info.key[i]; });
+      return sama ? 1 : 0;
+    }
+    if(info.type === "bs"){
+      var benar = 0;
+      s.vals.forEach(function(v,i){ if(v === info.key[i]) benar++; });
+      return benar / 4;
+    }
+    return 0;
+  }
+
+  function keyText(no){
+    var info = KEYS[no];
+    if(info.type === "pg") return info.key;
+    if(info.type === "mcma") return info.key.map(function(n){ return "(" + n + ")"; }).join(", ");
+    return info.key.map(function(v,i){ return HURUF_BS[i] + ". " + v; }).join(", ");
+  }
+
+  function markFeedback(no, frac){
+    var art = soalEls[no], info = KEYS[no], s = state[no];
+    var st = el("status-" + no);
+    if(st) st.style.display = "none";
+    var badge = document.createElement("span");
+    badge.className = "badge-hasil " + (frac === 1 ? "b" : (frac === 0 ? "s" : "seb"));
+    badge.id = "badge-" + no;
+    badge.textContent = frac === 1 ? "Benar \u2713" : (frac === 0 ? "Salah \u2717" : "Sebagian Benar");
+    var label = art.querySelector(".label-tipe");
+    label.parentNode.insertBefore(badge, label.nextSibling);
+
+    if(info.type === "pg"){
+      Array.prototype.forEach.call(art.querySelectorAll("ol.pilihan li"), function(li){
+        var h = li.getAttribute("data-huruf");
+        if(h === s.val && h === info.key) li.classList.add("benar");
+        else if(h === s.val) li.classList.add("salah");
+        else if(h === info.key) li.classList.add("kunci-benar");
+      });
+    } else if(info.type === "mcma"){
+      Array.prototype.forEach.call(art.querySelectorAll("ol.pernyataan li"), function(li){
+        var idx = Number(li.getAttribute("data-idx"));
+        var dipilih = !!s.set[idx], kunci = info.key.indexOf(idx) >= 0;
+        if(dipilih && kunci) li.classList.add("benar");
+        else if(dipilih) li.classList.add("salah");
+        else if(kunci) li.classList.add("kunci-benar");
+      });
+    } else if(info.type === "bs"){
+      Array.prototype.forEach.call(art.querySelectorAll("tbody tr"), function(tr, i){
+        Array.prototype.forEach.call(tr.querySelectorAll(".bs-btn"), function(btn){
+          var v = btn.getAttribute("data-val");
+          if(v === s.vals[i] && v === info.key[i]) btn.classList.add("benar");
+          else if(v === s.vals[i]) btn.classList.add("salah");
+          else if(v === info.key[i]) btn.classList.add("kunci-benar");
+        });
+      });
+    }
+    var pb = el("bahas-" + no);
+    pb.innerHTML = "";
+    var k = document.createElement("span");
+    k.className = "kunci"; k.textContent = "Kunci jawaban: " + keyText(no);
+    pb.appendChild(k);
+    pb.appendChild(document.createElement("br"));
+    var t = document.createElement("span");
+    t.textContent = info.bahas;
+    pb.appendChild(t);
+    pb.classList.add("tampil");
+    art.classList.add("terkunci");
+  }
+
+  function finish(){
+    if(graded) { el("hasil").scrollIntoView({behavior:"smooth", block:"start"}); return; }
+    var hasil = el("hasil");
+    var missing = NOMOR.filter(function(no){ return !isAnswered(no); });
+    if(missing.length && !forceFinish){
+      forceFinish = true;
+      hasil.innerHTML = "";
+      var box = document.createElement("div");
+      box.className = "hasil-box peringatan";
+      var p = document.createElement("p");
+      var b = document.createElement("strong");
+      b.textContent = "Masih ada " + missing.length + " soal yang belum lengkap dijawab: No. " + missing.join(", ") + ".";
+      p.appendChild(b);
+      box.appendChild(p);
+      var p2 = document.createElement("p");
+      p2.textContent = "Kerjakan dulu soal tersebut, atau klik tombol \u201CSelesai & Lihat Nilai\u201D sekali lagi jika kamu yakin ingin mengumpulkan sekarang. Soal yang kosong dihitung salah.";
+      box.appendChild(p2);
+      hasil.appendChild(box);
+      hasil.scrollIntoView({behavior:"smooth", block:"center"});
+      return;
+    }
+    graded = true; forceFinish = false;
+    var total = 0, penuh = 0, sebagian = 0;
+    NOMOR.forEach(function(no){
+      var f = gradeOne(no);
+      total += f;
+      if(f === 1) penuh++; else if(f > 0) sebagian++;
+      markFeedback(no, f);
+    });
+    lastScore = Math.round(total / 15 * 100);
+    el("skorIdentitas").textContent = lastScore + " / 100";
+    el("btnUnduh").hidden = false;
+
+    hasil.innerHTML = "";
+    var box2 = document.createElement("div");
+    box2.className = "hasil-box";
+    var judul = document.createElement("p");
+    judul.textContent = "Nilai Kamu";
+    judul.style.fontWeight = "700"; judul.style.margin = "0";
+    box2.appendChild(judul);
+    var skor = document.createElement("div");
+    skor.className = "skor-besar"; skor.textContent = lastScore;
+    box2.appendChild(skor);
+    var nama = el("inNama").value.trim(), kelas = el("inKelas").value.trim();
+    if(nama || kelas){
+      var pi = document.createElement("p");
+      pi.textContent = (nama ? "Nama: " + nama : "") + (nama && kelas ? " \u00B7 " : "") + (kelas ? "Kelas: " + kelas : "");
+      box2.appendChild(pi);
+    }
+    var ringkas = document.createElement("p");
+    ringkas.textContent = "Benar semua: " + penuh + " soal" +
+      (sebagian ? " \u00B7 Sebagian benar: " + sebagian + " soal" : "") +
+      " \u00B7 Belum tepat: " + (15 - penuh - sebagian) + " soal. " +
+      "Untuk soal Benar\u2013Salah, nilai dihitung per pernyataan (tiap pernyataan benar bernilai \u00BC soal).";
+    box2.appendChild(ringkas);
+    var ajak = document.createElement("p");
+    ajak.textContent = "Periksa tanda Benar/Salah dan pembahasan singkat pada setiap soal di atas. Tunjukkan atau unduh lembar jawaban ini kepada gurumu.";
+    box2.appendChild(ajak);
+    hasil.appendChild(box2);
+    refresh();
+    hasil.scrollIntoView({behavior:"smooth", block:"center"});
+  }
+
+  function resetAll(){
+    graded = false; forceFinish = false; lastScore = null;
+    NOMOR.forEach(function(no){
+      var s = state[no];
+      if(s.type === "pg") s.val = null;
+      else if(s.type === "mcma") s.set = {};
+      else if(s.type === "bs") s.vals = [null,null,null,null];
+      var art = soalEls[no];
+      art.classList.remove("terkunci");
+      Array.prototype.forEach.call(art.querySelectorAll("li"), function(li){
+        li.classList.remove("benar","salah","kunci-benar");
+      });
+      Array.prototype.forEach.call(art.querySelectorAll(".bs-btn"), function(btn){
+        btn.classList.remove("benar","salah","kunci-benar");
+      });
+      var badge = el("badge-" + no);
+      if(badge) badge.parentNode.removeChild(badge);
+      var st = el("status-" + no);
+      if(st) st.style.display = "";
+      var pb = el("bahas-" + no);
+      pb.classList.remove("tampil"); pb.innerHTML = "";
+    });
+    el("hasil").innerHTML = "";
+    el("skorIdentitas").textContent = "\u2014";
+    el("btnUnduh").hidden = true;
+    refresh();
+    window.scrollTo({top:0, behavior:"smooth"});
+  }
+
+  function downloadAnswers(){
+    var nama = el("inNama").value.trim(), kelas = el("inKelas").value.trim(), tgl = el("inTanggal").value;
+    var lines = [];
+    lines.push("LEMBAR JAWABAN \u2014 BANK SOAL MATEMATIKA KELAS 7");
+    lines.push("File 2: Soal Nomor 16\u201330 (Bab 2 lanjutan & Bab 3)");
+    lines.push("Nama: " + (nama || "-"));
+    lines.push("Kelas: " + (kelas || "-"));
+    lines.push("Tanggal: " + (tgl || "-"));
+    if(lastScore !== null) lines.push("Nilai: " + lastScore + " / 100");
+    lines.push("");
+    NOMOR.forEach(function(no){ lines.push("No. " + no + ": " + formatAnswer(no)); });
+    var blob = new Blob([lines.join("\n")], {type:"text/plain;charset=utf-8"});
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url; a.download = "lembar-jawaban-16-30.txt";
+    document.body.appendChild(a); a.click();
+    document.body.removeChild(a);
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 500);
+  }
+
+  el("btnSelesai").addEventListener("click", finish);
+  el("btnSelesaiAtas").addEventListener("click", finish);
+  el("btnUlangi").addEventListener("click", resetAll);
+  el("btnUlangiAtas").addEventListener("click", resetAll);
+  el("btnUnduh").addEventListener("click", downloadAnswers);
+
+  /* Tanggal hari ini sebagai isi awal */
+  var now = new Date();
+  var mm = String(now.getMonth() + 1).padStart(2, "0");
+  var dd = String(now.getDate()).padStart(2, "0");
+  el("inTanggal").value = now.getFullYear() + "-" + mm + "-" + dd;
+
+  refresh();
+})();
+</script>
+</body>
+</html>
