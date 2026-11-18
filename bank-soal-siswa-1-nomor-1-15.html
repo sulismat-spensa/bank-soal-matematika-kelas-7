@@ -78,6 +78,8 @@
   .identity{margin-top:18px;border:1.5px dashed var(--line-strong);border-radius:14px;padding:14px;display:grid;grid-template-columns:1fr 1fr;gap:12px 18px;background:color-mix(in srgb, var(--accent-soft) 45%, var(--paper))}
   .identity label{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:4px}
   .identity .line{border-bottom:2px solid var(--line-strong);min-height:28px}
+  .identity input{width:100%;border:0;border-bottom:2px solid var(--line-strong);background:transparent;color:var(--ink);font:inherit;font-size:16px;font-weight:600;padding:4px 2px 6px;outline:none}
+  .identity input:focus{border-bottom-color:var(--accent)}
   @media (max-width:560px){.identity{grid-template-columns:1fr}}
   /* Sections */
   .panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:20px 22px;margin-top:16px}
@@ -112,20 +114,49 @@
   .q-stem p{margin:0}
   .opts{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
   @media (max-width:640px){.opts{grid-template-columns:1fr}}
-  .opts li{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:color-mix(in srgb, var(--paper) 96%, var(--bg))}
+  .opts li{display:flex;gap:10px;align-items:flex-start;border:2px solid var(--line);border-radius:12px;padding:12px 14px;background:color-mix(in srgb, var(--paper) 96%, var(--bg));cursor:pointer;transition:border-color .15s,background .15s,transform .1s;-webkit-tap-highlight-color:transparent;user-select:none}
+  .opts li:hover{border-color:var(--accent)}
+  .opts li:active{transform:scale(.99)}
+  .opts li.selected{border-color:var(--accent);background:var(--accent-soft);box-shadow:0 0 0 1px var(--accent)}
+  .opts li.selected .opt-letter{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
   .opt-letter{flex:0 0 auto;width:28px;height:28px;border-radius:50%;border:2px solid var(--line-strong);display:grid;place-items:center;font-weight:800;font-size:13px;margin-top:1px;background:var(--paper)}
   .opts li div{flex:1}
   .stmts{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
-  .stmts li{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+  .stmts li{display:flex;gap:12px;align-items:flex-start;border:2px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer;transition:border-color .15s,background .15s;-webkit-tap-highlight-color:transparent}
+  .stmts li:hover{border-color:var(--amber)}
+  .stmts li.selected{border-color:var(--amber);background:var(--amber-soft);box-shadow:0 0 0 1px var(--amber)}
+  .stmts li .check{flex:0 0 auto;width:24px;height:24px;border-radius:6px;border:2px solid var(--line-strong);display:grid;place-items:center;font-size:15px;font-weight:900;color:transparent;background:var(--paper);margin-top:1px}
+  .stmts li.selected .check{background:var(--amber);border-color:var(--amber);color:#fff}
+  .q-status{margin-left:auto;font-size:12px;font-weight:800;letter-spacing:.03em;padding:5px 10px;border-radius:999px;background:var(--bg);color:var(--muted);border:1px solid var(--line);white-space:nowrap}
+  .q.answered .q-status{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+  .q.answered .q-no{background:var(--accent);color:var(--accent-ink)}
+  .progress-wrap{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .progress-track{flex:1;min-width:120px;height:10px;border-radius:999px;background:var(--line);overflow:hidden}
+  .progress-fill{height:100%;width:0%;background:var(--accent);border-radius:999px;transition:width .3s ease}
+  .nav-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:12px}
+  @media(min-width:560px){.nav-grid{grid-template-columns:repeat(15,1fr)}}
+  .nav-dot{display:grid;place-items:center;aspect-ratio:1;border-radius:10px;border:2px solid var(--line);background:var(--paper);font-weight:800;font-size:14px;color:var(--ink);text-decoration:none;min-height:44px}
+  .nav-dot.done{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 18px;border-radius:999px;border:0;font:inherit;font-weight:800;cursor:pointer}
+  .btn-primary{background:var(--accent);color:var(--accent-ink)}
+  .btn-ghost{background:var(--paper);color:var(--ink);border:1.5px solid var(--line-strong)}
+  .finish-box{margin-top:14px;border-radius:12px;padding:14px 16px;font-size:15px;line-height:1.6;display:none}
+  .finish-box.show{display:block}
+  .finish-box.ok{background:var(--accent-soft);border:1.5px solid var(--accent)}
+  .finish-box.warn{background:var(--amber-soft);border:1.5px solid var(--amber);color:var(--ink)}
   .stmt-no{flex:0 0 auto;font-weight:800;background:var(--amber-soft);color:var(--amber);border-radius:8px;padding:2px 9px;font-size:14px;margin-top:1px}
   .hint{margin-top:12px;font-size:13.5px;color:var(--muted);font-style:italic}
   table.bs{width:100%;border-collapse:collapse;margin-top:12px;font-size:15px}
   table.bs th, table.bs td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
   table.bs th{background:var(--accent-soft);font-weight:800}
   table.bs td.bs-col, table.bs th.bs-col{text-align:center;white-space:nowrap;width:110px}
-  .bs-choice{display:inline-flex;gap:14px;font-weight:800}
-  .bs-choice span{display:inline-flex;align-items:center;gap:6px}
-  .circle{width:18px;height:18px;border-radius:50%;border:2px solid var(--line-strong);display:inline-block;background:var(--paper)}
+  .bs-choice{display:inline-flex;gap:8px;font-weight:800}
+  .bs-btn{display:inline-flex;align-items:center;gap:6px;min-height:44px;min-width:52px;justify-content:center;padding:8px 12px;border-radius:999px;border:2px solid var(--line-strong);background:var(--paper);color:var(--ink);font:inherit;font-weight:800;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .bs-btn:hover{border-color:var(--rose)}
+  .bs-btn.selected{background:var(--rose);border-color:var(--rose);color:#fff}
+  .bs-btn.selected .circle{background:#fff;border-color:#fff;box-shadow:inset 0 0 0 4px var(--rose)}
+  .circle{width:16px;height:16px;border-radius:50%;border:2px solid var(--line-strong);display:inline-block;background:var(--paper);flex:0 0 auto}
+  @media(max-width:640px){table.bs thead{display:none}table.bs,table.bs tbody,table.bs tr,table.bs td{display:block;width:100%}table.bs tr{border:1px solid var(--line);border-radius:12px;margin-top:10px;padding:6px 4px}table.bs td{border:0;padding:8px 10px}table.bs td.bs-col{text-align:left;width:auto}}
   /* Answer sheet */
   table.ans{width:100%;border-collapse:collapse;font-size:15px;margin-top:10px}
   table.ans th, table.ans td{border:1px solid var(--line);padding:10px 12px}
@@ -156,7 +187,8 @@
 
 <div class="topbar">
   <div class="topbar-inner">
-    <strong>Matematika Kelas 7 — Versi Siswa</strong>
+    <strong>Matematika Kelas 7 — Klik &amp; Jawab</strong>
+    <span id="top-progress" style="font-size:13px;font-weight:800;background:var(--accent-soft);border:1px solid var(--line);padding:7px 12px;border-radius:999px">0 / 15 terjawab</span>
     <div class="file-pill">
       <span class="pill active">File 1 • No. 1–15</span>
       <span class="pill">File 2 • No. 16–30</span>
@@ -169,36 +201,39 @@
   <!-- HEADER -->
   <header class="hero">
     <p class="eyebrow">Bank Soal • Bab 1–3 • File 1 dari 2</p>
-    <h1>Soal Nomor 1–15</h1>
-    <p class="lead">Bilangan Bulat dan Pecahan (No. 1–12) dilanjutkan Bentuk Aljabar (No. 13–15). Kerjakan dengan teliti — soal ini tanpa kunci jawaban dan tanpa pembahasan.</p>
+    <h1>Soal Nomor 1–15 — Klik untuk Menjawab</h1>
+    <p class="lead">Bilangan Bulat dan Pecahan (No. 1–12) dilanjutkan Bentuk Aljabar (No. 13–15). <strong>Tidak perlu menulis di kertas untuk jawaban akhir</strong> — cukup klik jawabanmu di setiap soal, lembar jawaban di bawah akan terisi otomatis.</p>
     <div class="meta-row">
-      <span class="meta-chip">📄 <b>15</b> butir soal</span>
+      <span class="meta-chip">👆 <b>Klik</b> jawaban langsung</span>
       <span class="meta-chip">✦ PG • MCMA • Benar–Salah</span>
       <span class="meta-chip">⏱ Waktu disarankan <b>45 menit</b></span>
-      <span class="meta-chip">Nilai maksimum bagian ini <b>50</b></span>
+      <span class="meta-chip">Tanpa kunci jawaban</span>
+    </div>
+    <div style="margin-top:16px" aria-label="Kemajuan pengerjaan">
+      <div class="progress-wrap"><span id="progress-label" style="font-weight:800;font-size:14px">0 dari 15 soal terjawab</span><div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div><span id="progress-pct" style="font-weight:800;font-size:14px;color:var(--accent)">0%</span></div>
     </div>
     <div class="identity" aria-label="Identitas siswa">
-      <div><label>Nama Siswa</label><div class="line"></div></div>
-      <div><label>Kelas</label><div class="line"></div></div>
-      <div><label>Tanggal</label><div class="line"></div></div>
-      <div><label>Nilai</label><div class="line"></div></div>
+      <div><label for="id-nama">Nama Siswa</label><input id="id-nama" type="text" placeholder="Tulis namamu" autocomplete="name"></div>
+      <div><label for="id-kelas">Kelas</label><input id="id-kelas" type="text" placeholder="Contoh: 7A"></div>
+      <div><label for="id-tanggal">Tanggal</label><input id="id-tanggal" type="date"></div>
+      <div><label for="id-guru">Nama Guru / Pengawas</label><input id="id-guru" type="text" placeholder="Diisi bila diminta"></div>
     </div>
   </header>
 
   <!-- PETUNJUK -->
   <section class="panel" id="petunjuk">
-    <h2>Petunjuk Pengerjaan</h2>
+    <h2>Cara Menjawab — Tinggal Klik 👆</h2>
     <ul>
-      <li><strong>Pilihan Ganda (PG):</strong> pilih satu jawaban yang paling tepat (A, B, C, atau D).</li>
-      <li><strong>MCMA (Pilihan Ganda Kompleks):</strong> pilih <em>semua</em> pernyataan yang benar — jawaban benar dapat lebih dari satu. Tulis nomornya, misalnya (1), (2), dan (3).</li>
-      <li><strong>Benar–Salah:</strong> tentukan setiap pernyataan bernilai Benar (B) atau Salah (S).</li>
-      <li><strong>Soal numerasi &amp; cerita:</strong> tuliskan diketahui, ditanya, dan langkah perhitunganmu di kertas kerja.</li>
-      <li>Jawaban akhir tuliskan di <a href="#lembar-jawaban">Lembar Jawaban No. 1–15</a> di bagian bawah halaman ini.</li>
+      <li><strong>Pilihan Ganda (PG):</strong> klik <em>satu</em> pilihan A, B, C, atau D. Klik lagi pilihan lain untuk mengganti.</li>
+      <li><strong>MCMA:</strong> klik <em>semua</em> pernyataan yang menurutmu benar — boleh lebih dari satu. Klik lagi untuk membatalkan.</li>
+      <li><strong>Benar–Salah:</strong> untuk tiap baris a–d, klik tombol <strong>B</strong> atau <strong>S</strong>.</li>
+      <li>Jawabanmu langsung tercatat di <a href="#lembar-jawaban">Lembar Jawaban</a> di bawah. Nomor yang sudah dijawab berubah jadi hijau.</li>
+      <li>Hitungan kasar tetap boleh di kertas coretan, tapi jawaban akhir cukup diklik di sini.</li>
     </ul>
+    <div class="nav-grid" id="nav-grid" aria-label="Navigasi nomor soal"></div>
     <div class="jump">
-      <a href="#bab1">Mulai — Bab 1 (No. 1–12)</a>
-      <a href="#bab2" class="secondary">Bab 2 (No. 13–15)</a>
-      <a href="#lembar-jawaban" class="secondary">Lembar Jawaban</a>
+      <a href="#bab1">Mulai Mengerjakan ↓</a>
+      <a href="#lembar-jawaban" class="secondary">Lihat Lembar Jawaban</a>
     </div>
   </section>
 
@@ -271,7 +306,7 @@
       <li><span class="stmt-no">(3)</span><div>FPB dari 36 dan 48 adalah 12.</div></li>
       <li><span class="stmt-no">(4)</span><div>KPK dari 36 dan 48 adalah 72.</div></li>
     </ul>
-    <p class="hint">Tuliskan nomor pernyataan yang benar, misalnya (1), (2), dan (3).</p>
+    <p class="hint">Klik semua pernyataan yang benar — boleh lebih dari satu.</p>
   </article>
 
   <!-- 5 -->
@@ -419,47 +454,54 @@
       <li><span class="stmt-no">(3)</span><div>Konstantanya adalah −5.</div></li>
       <li><span class="stmt-no">(4)</span><div>Koefisien dari <em class="var">q</em> adalah 3.</div></li>
     </ul>
-    <p class="hint">Tuliskan nomor pernyataan yang benar pada lembar jawaban.</p>
+    <p class="hint">Klik semua pernyataan yang benar — boleh lebih dari satu.</p>
   </article>
 
   <!-- LEMBAR JAWABAN -->
   <section class="panel" id="lembar-jawaban" style="margin-top:30px">
-    <h2>Lembar Jawaban — Nomor 1–15</h2>
-    <p class="note">Untuk soal PG, tulis huruf jawabanmu. Untuk soal MCMA, tulis nomor pernyataan yang benar. Untuk soal Benar–Salah, tulis B atau S pada setiap baris a–d.</p>
+    <h2>Lembar Jawaban — Terisi Otomatis dari Klik Kamu</h2>
+    <p class="note">Tabel ini terisi sendiri saat kamu mengklik jawaban di atas. PG tampil sebagai huruf, MCMA sebagai nomor pernyataan, Benar–Salah sebagai B/S untuk a–d. Kalau masih kosong, berarti soal itu belum dijawab.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+      <button type="button" class="btn btn-primary" id="btn-finish">Selesai — Cek Kelengkapan ✓</button>
+      <button type="button" class="btn btn-ghost" id="btn-copy">Salin Jawaban Saya</button>
+      <button type="button" class="btn btn-ghost" id="btn-reset">Ulangi dari Awal</button>
+    </div>
+    <div class="finish-box" id="finish-box" role="status" aria-live="polite"></div>
+    <div class="finish-box" id="copy-box" role="status" aria-live="polite" style="white-space:pre-wrap"></div>
     <div class="ans-grid">
       <table class="ans">
         <thead><tr><th style="width:52px;text-align:center">No.</th><th>Jawaban</th></tr></thead>
         <tbody>
-          <tr><td class="no">1</td><td class="cell"></td></tr>
-          <tr><td class="no">2</td><td class="cell"></td></tr>
-          <tr><td class="no">3</td><td class="cell"></td></tr>
-          <tr><td class="no">4</td><td class="cell"></td></tr>
-          <tr><td class="no">5</td><td class="cell" style="font-size:13px;color:var(--muted)">a: ___ &nbsp; b: ___ &nbsp; c: ___ &nbsp; d: ___</td></tr>
-          <tr><td class="no">6</td><td class="cell"></td></tr>
-          <tr><td class="no">7</td><td class="cell"></td></tr>
-          <tr><td class="no">8</td><td class="cell"></td></tr>
+          <tr><td class="no">1</td><td id="ans-1" data-ans="1" class="cell"></td></tr>
+          <tr><td class="no">2</td><td id="ans-2" data-ans="2" class="cell"></td></tr>
+          <tr><td class="no">3</td><td id="ans-3" data-ans="3" class="cell"></td></tr>
+          <tr><td class="no">4</td><td id="ans-4" data-ans="4" class="cell"></td></tr>
+          <tr><td class="no">5</td><td id="ans-5" data-ans="5" class="cell" style="font-size:13px;color:var(--muted)">a: ___ &nbsp; b: ___ &nbsp; c: ___ &nbsp; d: ___</td></tr>
+          <tr><td class="no">6</td><td id="ans-6" data-ans="6" class="cell"></td></tr>
+          <tr><td class="no">7</td><td id="ans-7" data-ans="7" class="cell"></td></tr>
+          <tr><td class="no">8</td><td id="ans-8" data-ans="8" class="cell"></td></tr>
         </tbody>
       </table>
       <table class="ans">
         <thead><tr><th style="width:52px;text-align:center">No.</th><th>Jawaban</th></tr></thead>
         <tbody>
-          <tr><td class="no">9</td><td class="cell" style="font-size:13px;color:var(--muted)">a: ___ &nbsp; b: ___ &nbsp; c: ___ &nbsp; d: ___</td></tr>
-          <tr><td class="no">10</td><td class="cell"></td></tr>
-          <tr><td class="no">11</td><td class="cell"></td></tr>
-          <tr><td class="no">12</td><td class="cell"></td></tr>
-          <tr><td class="no">13</td><td class="cell"></td></tr>
-          <tr><td class="no">14</td><td class="cell"></td></tr>
-          <tr><td class="no">15</td><td class="cell"></td></tr>
+          <tr><td class="no">9</td><td id="ans-9" data-ans="9" class="cell" style="font-size:13px;color:var(--muted)">a: ___ &nbsp; b: ___ &nbsp; c: ___ &nbsp; d: ___</td></tr>
+          <tr><td class="no">10</td><td id="ans-10" data-ans="10" class="cell"></td></tr>
+          <tr><td class="no">11</td><td id="ans-11" data-ans="11" class="cell"></td></tr>
+          <tr><td class="no">12</td><td id="ans-12" data-ans="12" class="cell"></td></tr>
+          <tr><td class="no">13</td><td id="ans-13" data-ans="13" class="cell"></td></tr>
+          <tr><td class="no">14</td><td id="ans-14" data-ans="14" class="cell"></td></tr>
+          <tr><td class="no">15</td><td id="ans-15" data-ans="15" class="cell"></td></tr>
           <tr><td class="no" style="background:var(--accent-soft);color:var(--muted)">—</td><td class="cell" style="color:var(--muted);font-size:13.5px">Selesai untuk File 1 ✓</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="note" style="margin-top:12px">Untuk mencetak: gunakan menu <strong>Cetak / Print</strong> di browser, lalu pilih kertas A4. Halaman ini sudah diatur rapi untuk dicetak.</p>
+    <p class="note" style="margin-top:12px">Sudah selesai? Klik <strong>“Selesai — Cek Kelengkapan”</strong> di atas, lalu tunjukkan / serahkan hasilmu ke guru sesuai arahan di kelas. Kamu juga bisa menyalin jawabanmu dengan tombol “Salin Jawaban Saya”.</p>
   </section>
 
   <div class="next-box">
     <div>
-      <h3>Sudah selesai No. 1–15?</h3>
+      <h3>Sudah selesai No. 1–15? 🎉</h3>
       <p>Lanjutkan ke File 2 untuk Nomor 16–30: lanjutan Bentuk Aljabar (No. 16–21) dan Persamaan &amp; Pertidaksamaan Linear Satu Variabel (No. 22–30).</p>
     </div>
     <span class="tag">Selanjutnya → File 2 • No. 16–30</span>
@@ -468,5 +510,179 @@
   <footer>Bank Soal Matematika Kelas 7 — Bab 1–3 • Versi Siswa (Tanpa Kunci Jawaban) • File 1: Nomor 1–15 &nbsp;—&nbsp; Selamat belajar</footer>
 
 </div>
+<script>
+(function(){
+  var TOTAL = 15;
+  var state = {}; // qnum -> {type:'pg', value:'A'} | {type:'mcma', values:[1,3]} | {type:'bs', values:{a:'B',...}}
+  var articles = Array.prototype.slice.call(document.querySelectorAll('article.q'));
+
+  // Build nav grid
+  var navGrid = document.getElementById('nav-grid');
+  if(navGrid){
+    for(var n=1;n<=TOTAL;n++){
+      var a=document.createElement('a');
+      a.href='#soal-'+n; a.className='nav-dot'; a.id='nav-'+n; a.textContent=n; a.setAttribute('aria-label','Ke soal '+n);
+      navGrid.appendChild(a);
+    }
+  }
+
+  function qNum(article){ var m=/soal-(\d+)/.exec(article.id||''); return m?parseInt(m[1],10):0; }
+
+  function isAnswered(num){
+    var s=state[num]; if(!s) return false;
+    if(s.type==='pg') return !!s.value;
+    if(s.type==='mcma') return s.values && s.values.length>0;
+    if(s.type==='bs'){ var v=s.values||{}; return v.a && v.b && v.c && v.d; }
+    return false;
+  }
+  function isPartialBS(num){ var s=state[num]; if(!s||s.type!=='bs') return false; var v=s.values||{}; return !!(v.a||v.b||v.c||v.d) && !isAnswered(num); }
+
+  function answerText(num){
+    var s=state[num]; if(!s) return '';
+    if(s.type==='pg') return s.value||'';
+    if(s.type==='mcma') return (s.values||[]).slice().sort(function(a,b){return a-b;}).map(function(x){return '('+x+')';}).join(', ');
+    if(s.type==='bs'){ var v=s.values||{}; var rows=['a','b','c','d']; var parts=[]; var any=false; rows.forEach(function(r){ if(v[r]) any=true; parts.push(r+': '+(v[r]||'—')); }); return any?parts.join('  •  '):''; }
+    return '';
+  }
+
+  function refresh(){
+    var done=0;
+    for(var i=1;i<=TOTAL;i++){
+      var art=document.getElementById('soal-'+i);
+      var ansEl=document.getElementById('ans-'+i);
+      var navEl=document.getElementById('nav-'+i);
+      var answered=isAnswered(i);
+      if(answered) done++;
+      if(art){
+        art.classList.toggle('answered', answered);
+        var st=art.querySelector('.q-status');
+        if(st){ st.textContent = answered ? '✓ Terjawab' : (isPartialBS(i) ? 'Sebagian…' : 'Belum dijawab'); }
+      }
+      if(navEl) navEl.classList.toggle('done', answered);
+      if(ansEl){
+        var txt=answerText(i);
+        ansEl.textContent = txt || (state[i] && state[i].type==='bs' ? '' : '');
+        if(state[i] && state[i].type==='bs' && !txt){ ansEl.textContent='a: —  •  b: —  •  c: —  •  d: —'; }
+        ansEl.style.fontWeight = txt ? '800' : '400';
+        ansEl.style.color = txt ? 'var(--ink)' : 'var(--muted)';
+        ansEl.style.fontSize = (state[i] && state[i].type==='bs') ? '13.5px' : '15px';
+        if(!state[i] && (i===5||i===9)){ ansEl.textContent='a: —  •  b: —  •  c: —  •  d: —'; ansEl.style.fontSize='13.5px'; }
+        if(!txt && i!==5 && i!==9){ ansEl.textContent='— belum dijawab —'; ansEl.style.fontSize='13px'; }
+      }
+    }
+    var pct=Math.round(done/TOTAL*100);
+    var lbl=document.getElementById('progress-label'); if(lbl) lbl.textContent=done+' dari '+TOTAL+' soal terjawab';
+    var fill=document.getElementById('progress-fill'); if(fill) fill.style.width=pct+'%';
+    var pctEl=document.getElementById('progress-pct'); if(pctEl) pctEl.textContent=pct+'%';
+    var top=document.getElementById('top-progress'); if(top) top.textContent=done+' / '+TOTAL+' terjawab';
+    return done;
+  }
+
+  articles.forEach(function(article){
+    var num=qNum(article); if(!num) return;
+    // status pill
+    var head=article.querySelector('.q-head');
+    if(head && !head.querySelector('.q-status')){ var sp=document.createElement('span'); sp.className='q-status'; sp.textContent='Belum dijawab'; head.appendChild(sp); }
+
+    var opts=article.querySelectorAll('.opts li');
+    var stmts=article.querySelectorAll('.stmts li');
+    var bsTable=article.querySelector('table.bs');
+
+    if(opts.length){
+      state[num]={type:'pg', value:null};
+      opts.forEach(function(li, idx){
+        var letter=(li.querySelector('.opt-letter')||{}).textContent||'ABCD'[idx];
+        letter=letter.trim();
+        li.setAttribute('tabindex','0'); li.setAttribute('role','button'); li.setAttribute('aria-label','Pilihan '+letter);
+        function pick(){
+          opts.forEach(function(o){o.classList.remove('selected');});
+          li.classList.add('selected'); state[num].value=letter; hideFinish(); refresh();
+        }
+        li.addEventListener('click', pick);
+        li.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); pick(); }});
+      });
+    } else if(stmts.length){
+      state[num]={type:'mcma', values:[]};
+      stmts.forEach(function(li, idx){
+        var check=document.createElement('span'); check.className='check'; check.textContent='✓'; li.insertBefore(check, li.firstChild);
+        li.setAttribute('tabindex','0'); li.setAttribute('role','button');
+        function toggle(){
+          var v=idx+1; var pos=state[num].values.indexOf(v);
+          if(pos>=0){ state[num].values.splice(pos,1); li.classList.remove('selected'); }
+          else { state[num].values.push(v); li.classList.add('selected'); }
+          hideFinish(); refresh();
+        }
+        li.addEventListener('click', toggle);
+        li.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); toggle(); }});
+      });
+    } else if(bsTable){
+      state[num]={type:'bs', values:{a:null,b:null,c:null,d:null}};
+      var rows=bsTable.querySelectorAll('tbody tr');
+      rows.forEach(function(tr, rIdx){
+        var key='abcd'[rIdx];
+        var choice=tr.querySelector('.bs-choice'); if(!choice) return;
+        var oldSpans=Array.prototype.slice.call(choice.children);
+        choice.innerHTML='';
+        ['B','S'].forEach(function(val){
+          var btn=document.createElement('button'); btn.type='button'; btn.className='bs-btn'; btn.setAttribute('aria-label','Pernyataan '+key+' '+(val==='B'?'Benar':'Salah'));
+          btn.innerHTML='<span class="circle"></span> '+val;
+          btn.addEventListener('click', function(){
+            state[num].values[key]=val;
+            Array.prototype.forEach.call(choice.querySelectorAll('.bs-btn'), function(b){b.classList.remove('selected');});
+            btn.classList.add('selected'); hideFinish(); refresh();
+          });
+          choice.appendChild(btn);
+        });
+      });
+    }
+  });
+
+  function hideFinish(){ var b=document.getElementById('finish-box'); if(b){b.classList.remove('show');} var c=document.getElementById('copy-box'); if(c){c.classList.remove('show');} }
+
+  var btnFinish=document.getElementById('btn-finish');
+  if(btnFinish) btnFinish.addEventListener('click', function(){
+    var done=refresh(); var box=document.getElementById('finish-box'); if(!box) return;
+    box.classList.add('show');
+    if(done===TOTAL){ box.className='finish-box show ok'; box.innerHTML='<strong>Hebat, semua 15 soal sudah dijawab! 🎉</strong><br>Periksa lagi jawabanmu di Lembar Jawaban di bawah. Kalau sudah yakin, tunjukkan halaman ini ke gurumu sesuai arahan di kelas, lalu lanjut ke File 2 (No. 16–30).'; }
+    else {
+      var missing=[]; for(var i=1;i<=TOTAL;i++){ if(!isAnswered(i)) missing.push(i); }
+      box.className='finish-box show warn';
+      box.innerHTML='<strong>Baru '+done+' dari 15 soal yang selesai.</strong><br>Nomor yang belum lengkap: <strong>'+missing.join(', ')+'</strong>. Klik nomornya di navigasi di bagian Petunjuk untuk kembali ke soal itu. Untuk soal Benar–Salah, pastikan keempat baris a–d sudah diklik semua.';
+    }
+    box.scrollIntoView({behavior:'smooth', block:'center'});
+  });
+
+  var btnCopy=document.getElementById('btn-copy');
+  if(btnCopy) btnCopy.addEventListener('click', function(){
+    var nama=(document.getElementById('id-nama')||{}).value||'';
+    var kelas=(document.getElementById('id-kelas')||{}).value||'';
+    var lines=[]; lines.push('Jawaban Matematika Kelas 7 — File 1 (No. 1–15)');
+    if(nama) lines.push('Nama: '+nama); if(kelas) lines.push('Kelas: '+kelas);
+    lines.push('—');
+    for(var i=1;i<=TOTAL;i++){ lines.push(i+'. '+(answerText(i)||'(belum dijawab)')); }
+    var text=lines.join('\n');
+    var box=document.getElementById('copy-box');
+    function show(){ if(box){ box.className='finish-box show ok'; box.textContent=text; } }
+    if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(function(){ if(box){box.className='finish-box show ok'; box.textContent='✓ Jawaban berhasil disalin. Tempel (paste) ke tempat yang diminta gurumu.\n\n'+text;} }).catch(show); }
+    else show();
+  });
+
+  var btnReset=document.getElementById('btn-reset');
+  if(btnReset) btnReset.addEventListener('click', function(){
+    articles.forEach(function(article){
+      article.querySelectorAll('.selected').forEach(function(el){el.classList.remove('selected');});
+      var num=qNum(article); var s=state[num]; if(!s) return;
+      if(s.type==='pg') s.value=null; if(s.type==='mcma') s.values=[]; if(s.type==='bs') s.values={a:null,b:null,c:null,d:null};
+    });
+    hideFinish(); refresh(); window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  // Default tanggal hari ini
+  var tgl=document.getElementById('id-tanggal');
+  if(tgl && !tgl.value){ try{ tgl.value=new Date().toISOString().slice(0,10); }catch(e){} }
+
+  refresh();
+})();
+</script>
 </body>
 </html>
